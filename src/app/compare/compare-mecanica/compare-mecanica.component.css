@@ -1,0 +1,7 @@
+.cartao {
+  width: 305px;
+  border: 1px solid gray;
+  /*float: left;*/
+  padding: 5px;
+  text-align: center;
+}

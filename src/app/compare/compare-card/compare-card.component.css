@@ -1,0 +1,20 @@
+.cartao {
+  width: 305px;
+  border: 1px solid gray;
+  /*float: left;*/
+  padding: 5px;
+  text-align: center;
+}
+
+.rating {
+  margin: 0 auto;
+  background: url("../../../assets/imagens/estrelas.png") bottom left;
+  width: 168px;
+  height: 26px;
+}
+
+.rated {
+  background: url("../../../assets/imagens/estrelas.png") top left;
+  width: 158px;
+  height: 26px;
+}

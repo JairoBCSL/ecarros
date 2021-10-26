@@ -1,0 +1,51 @@
+<table class="table table-bordered cartao">
+  <tbody>
+    <tr>
+      <td colspan="2">
+        {{ mecanica.motorizacao | number: "1.1" }}
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 100px" *ngFor="let tipo of mecanica.combustivel">
+        {{ tipo }}
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let potencia of mecanica.potencia">
+        {{ potencia }}
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let torque of mecanica.torque">{{ torque }}</td>
+    </tr>
+    <tr>
+      <td *ngFor="let velocidadeMax of mecanica.velocidadeMax">
+        {{ velocidadeMax }}
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let tempo0a100 of mecanica.tempo0a100">
+        {{ tempo0a100 }}
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let consumoCidade of mecanica.consumoCidade">
+        {{ consumoCidade }}
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let consumoEstrada of mecanica.consumoEstrada">
+        {{ consumoEstrada }}
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">{{ mecanica.transmissao }}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{ mecanica.tracao }}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{ mecanica.direcao }}</td>
+    </tr>
+  </tbody>
+</table>
