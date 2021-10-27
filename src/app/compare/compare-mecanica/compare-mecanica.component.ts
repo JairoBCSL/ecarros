@@ -8,6 +8,7 @@ import { CarroMecanica } from '../models/carro-mecanica';
 })
 export class CompareMecanicaComponent implements OnInit {
   @Input() mecanica: CarroMecanica;
+  @Input() nome: string;
 
   constructor() {}
 

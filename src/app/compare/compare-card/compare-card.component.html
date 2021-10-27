@@ -37,8 +37,8 @@
       <div class="rated"></div>
     </div>
     <p class="card-text fw-bold">
-      de R$120.000,00 <br />
-      a R$160.000,00
+      de R${{ card.precoMin | currency: "BRL":true }} <br />
+      a R${{ card.precoMax | currency: "BRL":true }}
     </p>
   </div>
 </div>

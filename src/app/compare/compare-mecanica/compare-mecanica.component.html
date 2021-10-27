@@ -1,8 +1,15 @@
 <table class="table table-bordered cartao">
+  <thead>
+    <tr>
+      <th style="background-color: #ddd" colspan="2">
+        {{ nome }}
+      </th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
       <td colspan="2">
-        {{ mecanica.motorizacao | number: "1.1" }}
+        {{ mecanica.motorizacao | number: "1.0-3" }}
       </td>
     </tr>
     <tr>

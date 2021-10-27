@@ -6,7 +6,7 @@ import { CompareRoutingModule } from './campare/compare-routing.module';
 import { CompareCardComponent } from './compare-card/compare-card.component';
 import { CompareMecanicaComponent } from './compare-mecanica/compare-mecanica.component';
 import { CompareCarComponent } from './compare-car/compare-car.component';
-
+import { CompareDimensoesComponent } from './compare-dimensoes/compare-dimensoes.component';
 
 @NgModule({
   declarations: [
@@ -14,10 +14,8 @@ import { CompareCarComponent } from './compare-car/compare-car.component';
     CompareCardComponent,
     CompareMecanicaComponent,
     CompareCarComponent,
+    CompareDimensoesComponent,
   ],
-  imports: [
-    CommonModule,
-    CompareRoutingModule
-  ]
+  imports: [CommonModule, CompareRoutingModule],
 })
-export class CompareModule { }
+export class CompareModule {}
