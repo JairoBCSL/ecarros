@@ -9,3 +9,17 @@
   text-align: center;
   /*float: left;*/
 }
+
+.bloco {
+  width: 306px;
+  margin-top: 25px;
+  box-shadow: 1px 0 0 0 #ccc, 0 1px 0 0 #ccc, 1px 1px 0 0 #ccc,
+    /* Just to fix the corner */ 1px 0 0 0 #ccc inset, 0 1px 0 0 #ccc inset;
+  background-color: white;
+}
+
+.naoQuebra {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

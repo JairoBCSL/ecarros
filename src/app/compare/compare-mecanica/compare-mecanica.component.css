@@ -1,3 +1,15 @@
-td {
-  border: 1px solid #e5e5e5;
+div {
+  box-shadow: 1px 0 0 0 #ccc, 0 1px 0 0 #ccc, 1px 1px 0 0 #ccc,
+    /* Just to fix the corner */ 1px 0 0 0 #ccc inset, 0 1px 0 0 #ccc inset;
+  text-align: center;
+}
+
+.simples {
+  width: 100%;
+  display: inline-block;
+}
+
+.dupla {
+  width: 50%;
+  display: inline-block;
 }

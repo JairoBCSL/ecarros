@@ -1,11 +1,6 @@
-<div class="table table-bordered">
-  <app-compare-card [cards]="cards"></app-compare-card>
-  <app-compare-mecanica
-    [mecanicas]="mecanicas"
-    [nomes]="nomes"
-  ></app-compare-mecanica>
-  <app-compare-dimensoes
-    [dimensoes]="dimensoes"
-    [nomes]="nomes"
-  ></app-compare-dimensoes>
+<div style="background-color: #eee">
+  <app-compare-car
+    *ngFor="let carro of carros"
+    [carro]="carro"
+  ></app-compare-car>
 </div>

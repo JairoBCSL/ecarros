@@ -1,152 +1,95 @@
-<table class="table table-bordered cartao">
-  <thead>
-    <tr class="row">
-      <th class="col-3" style="background-color: #ccc">Mecânica</th>
-      <th
-        class="col-3"
-        *ngFor="let nome of nomes"
-        style="background-color: #ccc"
-      >
-        {{ nome }}
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">Motorização (L)</td>
-      <td class="col-3" *ngFor="let mecanica of mecanicas">
-        {{ mecanica.motorizacao | number: "1.1-1" }}
-      </td>
-    </tr>
-
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">Combustível</td>
-      <td
-        class="col-3"
-        style="width: 100px; padding: 0"
-        *ngFor="let mecanica of mecanicas"
-      >
-        <div
-          style="width: 50%; display: inline-block"
-          *ngFor="let combustivel of mecanica.combustivel"
-        >
-          {{ combustivel }}
-        </div>
-      </td>
-    </tr>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">Potência (cv)</td>
-      <td
-        class="col-3"
-        style="width: 100px; padding: 0"
-        *ngFor="let mecanica of mecanicas"
-      >
-        <div
-          style="width: 50%; display: inline-block"
-          *ngFor="let potencia of mecanica.potencia"
-        >
-          {{ potencia }}
-        </div>
-      </td>
-    </tr>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">Torque (Kgf.m)</td>
-      <td
-        class="col-3"
-        style="width: 100px; padding: 0"
-        *ngFor="let mecanica of mecanicas"
-      >
-        <div
-          style="width: 50%; display: inline-block"
-          *ngFor="let torque of mecanica.torque"
-        >
-          {{ torque }}
-        </div>
-      </td>
-    </tr>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">
-        Velocidade Máxima (Km/h)
-      </td>
-      <td
-        class="col-3"
-        style="width: 100px; padding: 0"
-        *ngFor="let mecanica of mecanicas"
-      >
-        <div
-          style="width: 50%; display: inline-block"
-          *ngFor="let velocidadeMax of mecanica.velocidadeMax"
-        >
-          {{ velocidadeMax }}
-        </div>
-      </td>
-    </tr>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">Tempo 0-100 (s)</td>
-      <td
-        class="col-3"
-        style="width: 100px; padding: 0"
-        *ngFor="let mecanica of mecanicas"
-      >
-        <div
-          style="width: 50%; display: inline-block"
-          *ngFor="let tempo0a100 of mecanica.tempo0a100"
-        >
-          {{ tempo0a100 }}
-        </div>
-      </td>
-    </tr>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">
-        Consumo na Cidade (Km/L)
-      </td>
-      <td
-        class="col-3"
-        style="width: 100px; padding: 0"
-        *ngFor="let mecanica of mecanicas"
-      >
-        <div
-          style="width: 50%; display: inline-block"
-          *ngFor="let consumoCidade of mecanica.consumoCidade"
-        >
-          {{ consumoCidade }}
-        </div>
-      </td>
-    </tr>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">
-        Consumo na Estrada (Km/L)
-      </td>
-      <td
-        class="col-3"
-        style="width: 100px; padding: 0"
-        *ngFor="let mecanica of mecanicas"
-      >
-        <div
-          style="width: 50%; display: inline-block"
-          *ngFor="let consumoEstrada of mecanica.consumoEstrada"
-        >
-          {{ consumoEstrada }}
-        </div>
-      </td>
-    </tr>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">Marcha</td>
-      <td *ngFor="let mecanica of mecanicas" class="col-3">
-        {{ mecanica.transmissao }}
-      </td>
-    </tr>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">Tração</td>
-      <td *ngFor="let mecanica of mecanicas" class="col-3">
-        {{ mecanica.tracao }}
-      </td>
-    </tr>
-    <tr class="row">
-      <td class="col-3" style="background-color: #eee">Direção</td>
-      <td *ngFor="let mecanica of mecanicas" class="col-3">
-        {{ mecanica.direcao }}
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="bloco">
+  <div style="background-color: #ddd" class="naoQuebra">
+    {{ nome }}
+  </div>
+  <div>
+    {{ mecanica.motorizacao | number: "1.1-1" }}
+  </div>
+  <div>
+    <div
+      class="simples"
+      [ngClass]="{
+        simples: mecanica.combustivel.length == 1,
+        dupla: mecanica.combustivel.length == 2
+      }"
+      *ngFor="let combustivel of mecanica.combustivel"
+    >
+      {{ combustivel }}
+    </div>
+  </div>
+  <div>
+    <div
+      [ngClass]="{
+        simples: mecanica.combustivel.length == 1,
+        dupla: mecanica.combustivel.length == 2
+      }"
+      *ngFor="let potencia of mecanica.potencia"
+    >
+      {{ potencia }}
+    </div>
+  </div>
+  <div>
+    <div
+      [ngClass]="{
+        simples: mecanica.combustivel.length == 1,
+        dupla: mecanica.combustivel.length == 2
+      }"
+      *ngFor="let torque of mecanica.torque"
+    >
+      {{ torque }}
+    </div>
+  </div>
+  <div>
+    <div
+      [ngClass]="{
+        simples: mecanica.combustivel.length == 1,
+        dupla: mecanica.combustivel.length == 2
+      }"
+      *ngFor="let velocidadeMax of mecanica.velocidadeMax"
+    >
+      {{ velocidadeMax }}
+    </div>
+  </div>
+  <div>
+    <div
+      [ngClass]="{
+        simples: mecanica.combustivel.length == 1,
+        dupla: mecanica.combustivel.length == 2
+      }"
+      *ngFor="let tempo0a100 of mecanica.tempo0a100"
+    >
+      {{ tempo0a100 }}
+    </div>
+  </div>
+  <div>
+    <div
+      [ngClass]="{
+        simples: mecanica.combustivel.length == 1,
+        dupla: mecanica.combustivel.length == 2
+      }"
+      *ngFor="let consumoCidade of mecanica.consumoCidade"
+    >
+      {{ consumoCidade }}
+    </div>
+  </div>
+  <div>
+    <div
+      [ngClass]="{
+        simples: mecanica.combustivel.length == 1,
+        dupla: mecanica.combustivel.length == 2
+      }"
+      *ngFor="let consumoEstrada of mecanica.consumoEstrada"
+    >
+      {{ consumoEstrada }}
+    </div>
+  </div>
+  <div>
+    {{ mecanica.transmissao }}
+  </div>
+  <div>
+    {{ mecanica.tracao }}
+  </div>
+  <div>
+    {{ mecanica.direcao }}
+  </div>
+</div>
