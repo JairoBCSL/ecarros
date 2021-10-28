@@ -1,5 +1,11 @@
-<div class="row" style="width: 915px">
-  <app-compare-car [carro]="carros[0]" class="col-4"></app-compare-car>
-  <app-compare-car [carro]="carros[1]" class="col-4"></app-compare-car>
-  <app-compare-car [carro]="carros[2]" class="col-4"></app-compare-car>
+<div class="table table-bordered">
+  <app-compare-card [cards]="cards"></app-compare-card>
+  <app-compare-mecanica
+    [mecanicas]="mecanicas"
+    [nomes]="nomes"
+  ></app-compare-mecanica>
+  <app-compare-dimensoes
+    [dimensoes]="dimensoes"
+    [nomes]="nomes"
+  ></app-compare-dimensoes>
 </div>

@@ -1,50 +1,63 @@
 <table class="table table-bordered cartao">
   <thead>
     <tr>
-      <th style="background-color: #ddd" colspan="2">
+      <th class="col-3" style="background-color: #ddd; width: 305px">Nome</th>
+      <th
+        class="col-3"
+        *ngFor="let nome of nomes"
+        style="background-color: #ddd"
+      >
         {{ nome }}
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>
-        {{ dimensoes.altura }}
+      <td class="col-3">Altura (mm)</td>
+      <td class="col-3" *ngFor="let dimensao of dimensoes">
+        {{ dimensao.altura }}
       </td>
     </tr>
     <tr>
-      <td>
-        {{ dimensoes.largura }}
+      <td class="col-3">Largura (mm)</td>
+      <td class="col-3" *ngFor="let dimensao of dimensoes">
+        {{ dimensao.largura }}
       </td>
     </tr>
     <tr>
-      <td>
-        {{ dimensoes.comprimento }}
+      <td class="col-3">Comprimento (mm)</td>
+      <td class="col-3" *ngFor="let dimensao of dimensoes">
+        {{ dimensao.comprimento }}
       </td>
     </tr>
     <tr>
-      <td>
-        {{ dimensoes.peso }}
+      <td class="col-3">Peso (Kg)</td>
+      <td class="col-3" *ngFor="let dimensao of dimensoes">
+        {{ dimensao.peso }}
       </td>
     </tr>
     <tr>
-      <td>
-        {{ dimensoes.tanque }}
+      <td class="col-3">Tanque (L)</td>
+      <td class="col-3" *ngFor="let dimensao of dimensoes">
+        {{ dimensao.tanque }}
       </td>
     </tr>
     <tr>
-      <td>
-        {{ dimensoes.entreeixos }}
+      <td class="col-3">Entre-eixos (mm)</td>
+      <td class="col-3" *ngFor="let dimensao of dimensoes">
+        {{ dimensao.entreeixos }}
       </td>
     </tr>
     <tr>
-      <td>
-        {{ dimensoes.portamalas }}
+      <td class="col-3">Ponta-Malas (L)</td>
+      <td class="col-3" *ngFor="let dimensao of dimensoes">
+        {{ dimensao.portamalas }}
       </td>
     </tr>
     <tr>
-      <td>
-        {{ dimensoes.ocupantes }}
+      <td class="col-3">Ocupantes</td>
+      <td class="col-3" *ngFor="let dimensao of dimensoes">
+        {{ dimensao.ocupantes }}
       </td>
     </tr>
   </tbody>

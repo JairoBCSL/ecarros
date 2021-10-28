@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Carro } from '../models/carro';
+import { CarroCard } from '../models/carro-card';
+import { CarroDimensoes } from '../models/carro-dimensoes';
+import { CarroMecanica } from '../models/carro-mecanica';
 
 @Component({
   selector: 'app-campare',
@@ -9,9 +12,10 @@ import { Carro } from '../models/carro';
 export class CampareComponent implements OnInit {
   carros: Carro[] = [
     {
+      nome: 'Toyota Corolla XEi CVT 2022',
       card: {
         id: '01',
-        marca: 'Toyota asdfasdfasdfasdfasdfasdfasdf',
+        marca: 'Toyota',
         modelo: 'Corolla',
         versao: 'XEi CVT',
         ano: 2022,
@@ -45,6 +49,7 @@ export class CampareComponent implements OnInit {
       },
     },
     {
+      nome: 'Honda Civic 1.5 Turbo Touring CVT 2022',
       card: {
         id: '02',
         marca: 'Honda',
@@ -81,6 +86,7 @@ export class CampareComponent implements OnInit {
       },
     },
     {
+      nome: 'Chevrolet Cruze LTZ 1.4 Ecotec (Aut) 2022',
       card: {
         id: '03',
         marca: 'Chevrolet',
@@ -118,7 +124,19 @@ export class CampareComponent implements OnInit {
     },
   ];
 
+  cards: CarroCard[] = [];
+  mecanicas: CarroMecanica[] = [];
+  dimensoes: CarroDimensoes[] = [];
+  nomes: string[] = [];
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.carros.forEach((carro) => {
+      this.cards.push(carro.card);
+      this.mecanicas.push(carro.mecanica);
+      this.dimensoes.push(carro.dimensoes);
+      this.nomes.push(carro.nome);
+    });
+  }
 }
