@@ -4,3 +4,7 @@
     [carro]="carro"
   ></app-compare-car>
 </div>
+<button class="btn btn-primary" (click)="onAdd()">Add</button>
+<button class="btn btn-success" (click)="onList()">List</button>
+<input #inputRemove type="text" />
+<button class="btn btn-danger" (click)="onRemove(inputRemove)">Remove</button>

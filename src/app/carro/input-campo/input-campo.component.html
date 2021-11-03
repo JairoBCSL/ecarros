@@ -1,0 +1,13 @@
+<div>
+  <label class="form-label" for="{{ name }}"
+    >{{ label }}
+    <input
+      type="{{ type }}"
+      [formControl]=field
+      id="{{ name }}"
+      name="{{ name }}"
+      class="form-control"
+      [ngClass]="aplicaClasses()"
+    />
+  </label>
+</div>

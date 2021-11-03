@@ -8,6 +8,7 @@ import { CarroCard } from '../models/carro-card';
 })
 export class CompareCardComponent implements OnInit, OnDestroy {
   @Input() card: CarroCard;
+  @Input() id: number;
 
   constructor() {}
 
