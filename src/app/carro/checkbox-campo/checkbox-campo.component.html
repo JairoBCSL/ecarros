@@ -1,13 +1,13 @@
 <div>
-  <label class="form-label" for="{{ name }}">
+  <label class="form-check-label" for="{{ name }}">
     <input
-      #i
-      type="text"
+      type="checkbox"
       [formControl]="field"
       id="{{ name }}"
       name="{{ name }}"
-      class="form-control"
+      class="form-check-input"
       [ngClass]="aplicaClasses()"
+      (click)="mudou()"
     />{{ label }}
   </label>
 </div>

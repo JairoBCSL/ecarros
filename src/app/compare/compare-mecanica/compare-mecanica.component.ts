@@ -7,8 +7,8 @@ import { CarroMecanica } from '../models/carro-mecanica';
   styleUrls: ['./compare-mecanica.component.css'],
 })
 export class CompareMecanicaComponent implements OnInit {
-  @Input() mecanica: CarroMecanica;
-  @Input() nome: string;
+  @Input() mecanicas: CarroMecanica[];
+  @Input() nomes: string[];
 
   constructor() {}
 

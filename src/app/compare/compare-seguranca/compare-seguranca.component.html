@@ -1,0 +1,61 @@
+<table class="bloco">
+  <tr>
+    <td
+      *ngFor="let nome of nomes"
+      style="background-color: #ddd"
+      class="nao-quebra"
+    >
+      {{ nome }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.abs }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.airbagMotorista }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.airbagPassageiro }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.airbagLateral }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.controleDeTracao }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.ebd }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.alarme }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.computadorDeBordo }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.sensorDeFarol }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let seguranca of segurancas">
+      {{ seguranca.farolDeNeblina }}
+    </td>
+  </tr>
+</table>

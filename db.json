@@ -62,6 +62,38 @@
         "entreeixos": 2700,
         "portamalas": 470,
         "ocupantes": 5
+      },
+      "conforto": {
+        "arcondicionado": true,
+        "travasEletricas": true,
+        "arquente": true,
+        "pilotoAutomatico": true,
+        "regulagemAlturaVolante": true,
+        "trioEletrico": false,
+        "cdplayer": false,
+        "cdplayerMP3": false,
+        "usb": true,
+        "radioFmAm": true,
+        "kitMultimidia": true,
+        "bancosDeCouro": true,
+        "ajusteAlturaBanco": true,
+        "ajusteEletricoBanco": true,
+        "vidrosEletricosDianteiros": true,
+        "vidrosEletricosTraseiros": true,
+        "desembTraseiro": true,
+        "tetoSolar": false
+      },
+      "seguranca": {
+        "abs": true,
+        "airbagMotorista": true,
+        "airbagPassageiro": true,
+        "airbagLateral": false,
+        "controleDeTracao": true,
+        "ebd": true,
+        "alarme": false,
+        "computadorDeBordo": true,
+        "sensorDeFarol": true,
+        "farolDeNeblina": true
       }
     },
     {
@@ -117,6 +149,38 @@
         "entreeixos": 2700,
         "portamalas": 517,
         "ocupantes": 5
+      },
+      "conforto": {
+        "arcondicionado": true,
+        "travasEletricas": true,
+        "arquente": true,
+        "pilotoAutomatico": true,
+        "regulagemAlturaVolante": true,
+        "trioEletrico": false,
+        "cdplayer": false,
+        "cdplayerMP3": false,
+        "usb": true,
+        "radioFmAm": true,
+        "kitMultimidia": true,
+        "bancosDeCouro": true,
+        "ajusteAlturaBanco": true,
+        "ajusteEletricoBanco": true,
+        "vidrosEletricosDianteiros": true,
+        "vidrosEletricosTraseiros": true,
+        "desembTraseiro": true,
+        "tetoSolar": false
+      },
+      "seguranca": {
+        "abs": true,
+        "airbagMotorista": true,
+        "airbagPassageiro": true,
+        "airbagLateral": false,
+        "controleDeTracao": true,
+        "ebd": true,
+        "alarme": false,
+        "computadorDeBordo": true,
+        "sensorDeFarol": true,
+        "farolDeNeblina": true
       }
     },
     {
@@ -181,6 +245,38 @@
         "entreeixos": 2700,
         "portamalas": 440,
         "ocupantes": 5
+      },
+      "conforto": {
+        "arcondicionado": true,
+        "travasEletricas": true,
+        "arquente": true,
+        "pilotoAutomatico": true,
+        "regulagemAlturaVolante": true,
+        "trioEletrico": false,
+        "cdplayer": false,
+        "cdplayerMP3": false,
+        "usb": true,
+        "radioFmAm": true,
+        "kitMultimidia": true,
+        "bancosDeCouro": true,
+        "ajusteAlturaBanco": true,
+        "ajusteEletricoBanco": true,
+        "vidrosEletricosDianteiros": true,
+        "vidrosEletricosTraseiros": true,
+        "desembTraseiro": true,
+        "tetoSolar": false
+      },
+      "seguranca": {
+        "abs": true,
+        "airbagMotorista": true,
+        "airbagPassageiro": true,
+        "airbagLateral": false,
+        "controleDeTracao": true,
+        "ebd": true,
+        "alarme": false,
+        "computadorDeBordo": true,
+        "sensorDeFarol": true,
+        "farolDeNeblina": true
       }
     },
     {
@@ -235,8 +331,127 @@
         "portamalas": 323,
         "ocupantes": 5
       },
+      "conforto": {
+        "arcondicionado": true,
+        "travasEletricas": true,
+        "arquente": true,
+        "pilotoAutomatico": true,
+        "regulagemAlturaVolante": true,
+        "trioEletrico": false,
+        "cdplayer": false,
+        "cdplayerMP3": false,
+        "usb": true,
+        "radioFmAm": true,
+        "kitMultimidia": true,
+        "bancosDeCouro": true,
+        "ajusteAlturaBanco": true,
+        "ajusteEletricoBanco": true,
+        "vidrosEletricosDianteiros": true,
+        "vidrosEletricosTraseiros": true,
+        "desembTraseiro": true,
+        "tetoSolar": false
+      },
+      "seguranca": {
+        "abs": true,
+        "airbagMotorista": true,
+        "airbagPassageiro": true,
+        "airbagLateral": false,
+        "controleDeTracao": true,
+        "ebd": true,
+        "alarme": false,
+        "computadorDeBordo": true,
+        "sensorDeFarol": true,
+        "farolDeNeblina": true
+      },
       "nome": "Mitsubishi Lancer Evolution X 2022",
       "id": 4
+    },
+    {
+      "card": {
+        "marca": "Mitsubishi",
+        "modelo": "Lancer",
+        "versao": "Evolution X",
+        "ano": "2022",
+        "precoMin": "240000",
+        "precoMax": "240000"
+      },
+      "mecanica": {
+        "motorizacao": "2.0",
+        "combustivel": [
+          "Gasolina"
+        ],
+        "potencia": [
+          300
+        ],
+        "potenciaRpm": [
+          5600
+        ],
+        "torque": [
+          37.3
+        ],
+        "torqueRpm": [
+          4400
+        ],
+        "velocidadeMax": [
+          242
+        ],
+        "tempo0a100": [
+          6.3
+        ],
+        "consumoCidade": [
+          4.7
+        ],
+        "consumoEstrada": [
+          7.9
+        ],
+        "transmissao": "dupla embreagem man.sequ.com modo auto de 6 marchas",
+        "tracao": "4x4",
+        "direcao": "hidráulica"
+      },
+      "dimensoes": {
+        "altura": 1410,
+        "largura": 1810,
+        "comprimento": 4505,
+        "peso": 1590,
+        "tanque": 55,
+        "entreeixos": 2650,
+        "portamalas": 323,
+        "ocupantes": 5
+      },
+      "conforto": {
+        "arcondicionado": false,
+        "travasEletricas": false,
+        "arquente": false,
+        "pilotoAutomatico": false,
+        "regulagemAlturaVolante": false,
+        "trioEletrico": false,
+        "cdplayer": false,
+        "cdplayerMP3": false,
+        "usb": false,
+        "radioFmAm": false,
+        "kitMultimidia": false,
+        "bancosDeCouro": false,
+        "ajusteAlturaBanco": false,
+        "ajusteEletricoBanco": false,
+        "vidrosEletricosDianteiros": false,
+        "vidrosEletricosTraseiros": false,
+        "desembTraseiro": false,
+        "tetoSolar": false
+      },
+      "seguranca": {
+        "abs": false,
+        "airbagMotorista": false,
+        "airbagPassageiro": false,
+        "airbagLateral": false,
+        "controleDeTracao": false,
+        "ebd": false,
+        "alarme": false,
+        "computadorDeBordo": false,
+        "sensorDeFarol": false,
+        "farolDeNeblina": false
+      },
+      "nome": "Mitsubishi Lancer Evolution X 2022",
+      "id": 5
     }
   ]
 }

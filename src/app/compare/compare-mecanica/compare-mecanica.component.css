@@ -1,9 +1,3 @@
-div {
-  box-shadow: 1px 0 0 0 #ccc, 0 1px 0 0 #ccc, 1px 1px 0 0 #ccc,
-    /* Just to fix the corner */ 1px 0 0 0 #ccc inset, 0 1px 0 0 #ccc inset;
-  text-align: center;
-}
-
 .simples {
   width: 100%;
   display: inline-block;
@@ -12,4 +6,13 @@ div {
 .dupla {
   width: 50%;
   display: inline-block;
+}
+
+td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 0 1px black;
+  padding: 0px;
+  text-align: center;
 }

@@ -1,10 +1,23 @@
 <div style="background-color: #eee">
-  <app-compare-car
-    *ngFor="let carro of carros"
-    [carro]="carro"
-  ></app-compare-car>
+  <app-compare-card [cards]="cards" [ids]="ids"></app-compare-card>
+  <app-compare-mecanica
+    [mecanicas]="mecanicas"
+    [nomes]="nomes"
+  ></app-compare-mecanica>
+  <app-compare-dimensoes
+    [dimensoes]="dimensoes"
+    [nomes]="nomes"
+  ></app-compare-dimensoes>
+  a<app-compare-conforto
+    [confortos]="confortos"
+    [nomes]="nomes"
+  ></app-compare-conforto
+  >a b<app-compare-seguranca
+    [segurancas]="segurancas"
+    [nomes]="nomes"
+  ></app-compare-seguranca
+  >b
 </div>
-<button class="btn btn-primary" (click)="onAdd()">Add</button>
 <button class="btn btn-success" (click)="onList()">List</button>
 <input #inputRemove type="text" />
 <button class="btn btn-danger" (click)="onRemove(inputRemove)">Remove</button>

@@ -1,51 +1,63 @@
-<div class="bloco p-3">
-  <div>
-    <div style="float: left">
-      <h6 class="card-title">{{ card.marca }}</h6>
-      <h5 class="card-title">{{ card.modelo }}</h5>
-    </div>
-    <button style="float: right" class="btn btn-primary">X</button>
-  </div>
-  <div>
-    <img
-      src="../../../assets/imagens/{{ id }}.png"
-      class="card-img-top text-center"
-      alt="..."
-    />
-  </div>
-  <div>
-    <p style="font-size: 14px; text-align: center" class="naoQuebra">
-      {{ card.marca }} {{ card.modelo }} {{ card.versao }}
-      {{ card.ano }}
-    </p>
-  </div>
-  <div>
-    <div class="dropdown text-center">
-      <button
-        class="btn btn-primary dropdown-toggle"
-        role="button"
-        id="dropdownMenuLink"
-        data-bs-toggle="dropdown"
-        aria-expanded="true"
-      >
-        Versões
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li><a class="dropdown-item">Action</a></li>
-        <li><a class="dropdown-item">Another action</a></li>
-        <li><a class="dropdown-item">Something else here</a></li>
-      </ul>
-    </div>
-  </div>
-  <div>
-    <div class="rating mt-2 mb-2">
-      <div class="rated"></div>
-    </div>
-  </div>
-  <div>
-    <p class="card-text fw-bold text-center">
-      de {{ card.precoMin | currency: "BRL":"symbol" }} <br />
-      a {{ card.precoMax | currency: "BRL":"symbol" }}
-    </p>
-  </div>
-</div>
+<table class="bloco p-3">
+  <tr>
+    <td *ngFor="let card of cards">
+      <div style="float: left">
+        <h6 class="card-title">{{ card.marca }}</h6>
+        <h5 class="card-title">{{ card.modelo }}</h5>
+      </div>
+      <button style="float: right" class="btn btn-primary">X</button>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let id of ids" class="nao-quebra">
+      <img
+        src="../../../assets/imagens/{{ id }}.png"
+        class="card-img-top text-center"
+        alt="..."
+      />
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let card of cards">
+      <p style="font-size: 14px; text-align: center">
+        {{ card.marca }} {{ card.modelo }} {{ card.versao }}
+        {{ card.ano }}
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let card of cards">
+      <div class="dropdown text-center">
+        <button
+          class="btn btn-primary dropdown-toggle"
+          role="button"
+          id="dropdownMenuLink"
+          data-bs-toggle="dropdown"
+          aria-expanded="true"
+        >
+          Versões
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item">Action</a></li>
+          <li><a class="dropdown-item">Another action</a></li>
+          <li><a class="dropdown-item">Something else here</a></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let card of cards">
+      <div class="rating mt-2 mb-2">
+        <div class="rated"></div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let card of cards">
+      <p class="card-text fw-bold text-center">
+        de {{ card.precoMin | currency: "BRL":"symbol" }} <br />
+        a {{ card.precoMax | currency: "BRL":"symbol" }}
+      </p>
+    </td>
+  </tr>
+</table>

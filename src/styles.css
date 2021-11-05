@@ -11,15 +11,24 @@
 }
 
 .bloco {
-  width: 306px;
+  width: 1120px;
   margin-top: 25px;
   box-shadow: 1px 0 0 0 #ccc, 0 1px 0 0 #ccc, 1px 1px 0 0 #ccc,
-    /* Just to fix the corner */ 1px 0 0 0 #ccc inset, 0 1px 0 0 #ccc inset;
+    1px 0 0 0 #ccc inset, 0 1px 0 0 #ccc inset;
   background-color: white;
+  text-align: center;
 }
 
-.naoQuebra {
+.nao-quebra {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 280px;
+}
+
+.borda-legal {
+  box-shadow: 1px 0 0 0 #ccc, 0 1px 0 0 #ccc, 1px 1px 0 0 #ccc,
+    1px 0 0 0 #ccc inset, 0 1px 0 0 #ccc inset;
+  border-radius: 10px;
+  margin: 10px;
 }

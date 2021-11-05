@@ -7,8 +7,8 @@ import { CarroDimensoes } from '../models/carro-dimensoes';
   styleUrls: ['./compare-dimensoes.component.css'],
 })
 export class CompareDimensoesComponent implements OnInit {
-  @Input() dimensoes: CarroDimensoes;
-  @Input() nome: string;
+  @Input() dimensoes: CarroDimensoes[];
+  @Input() nomes: string[];
 
   constructor() {}
 

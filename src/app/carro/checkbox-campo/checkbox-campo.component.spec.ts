@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CompareCarComponent } from './compare-car.component';
+import { CheckboxCampoComponent } from './checkbox-campo.component';
 
-describe('CompareCarComponent', () => {
-  let component: CompareCarComponent;
-  let fixture: ComponentFixture<CompareCarComponent>;
+describe('CheckboxCampoComponent', () => {
+  let component: CheckboxCampoComponent;
+  let fixture: ComponentFixture<CheckboxCampoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CompareCarComponent ]
+      declarations: [ CheckboxCampoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CompareCarComponent);
+    fixture = TestBed.createComponent(CheckboxCampoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

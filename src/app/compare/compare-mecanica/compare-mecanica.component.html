@@ -1,95 +1,122 @@
-<div class="bloco">
-  <div style="background-color: #ddd" class="naoQuebra">
-    {{ nome }}
-  </div>
-  <div>
-    {{ mecanica.motorizacao | number: "1.1-1" }}
-  </div>
-  <div>
-    <div
-      class="simples"
-      [ngClass]="{
-        simples: mecanica.combustivel.length == 1,
-        dupla: mecanica.combustivel.length == 2
-      }"
-      *ngFor="let combustivel of mecanica.combustivel"
+<table class="bloco table-bordered">
+  <tr>
+    <td
+      *ngFor="let nome of nomes"
+      style="background-color: #ddd"
+      class="nao-quebra"
     >
-      {{ combustivel }}
-    </div>
-  </div>
-  <div>
-    <div
-      [ngClass]="{
-        simples: mecanica.combustivel.length == 1,
-        dupla: mecanica.combustivel.length == 2
-      }"
-      *ngFor="let potencia of mecanica.potencia"
-    >
-      {{ potencia }}
-    </div>
-  </div>
-  <div>
-    <div
-      [ngClass]="{
-        simples: mecanica.combustivel.length == 1,
-        dupla: mecanica.combustivel.length == 2
-      }"
-      *ngFor="let torque of mecanica.torque"
-    >
-      {{ torque }}
-    </div>
-  </div>
-  <div>
-    <div
-      [ngClass]="{
-        simples: mecanica.combustivel.length == 1,
-        dupla: mecanica.combustivel.length == 2
-      }"
-      *ngFor="let velocidadeMax of mecanica.velocidadeMax"
-    >
-      {{ velocidadeMax }}
-    </div>
-  </div>
-  <div>
-    <div
-      [ngClass]="{
-        simples: mecanica.combustivel.length == 1,
-        dupla: mecanica.combustivel.length == 2
-      }"
-      *ngFor="let tempo0a100 of mecanica.tempo0a100"
-    >
-      {{ tempo0a100 }}
-    </div>
-  </div>
-  <div>
-    <div
-      [ngClass]="{
-        simples: mecanica.combustivel.length == 1,
-        dupla: mecanica.combustivel.length == 2
-      }"
-      *ngFor="let consumoCidade of mecanica.consumoCidade"
-    >
-      {{ consumoCidade }}
-    </div>
-  </div>
-  <div>
-    <div
-      [ngClass]="{
-        simples: mecanica.combustivel.length == 1,
-        dupla: mecanica.combustivel.length == 2
-      }"
-      *ngFor="let consumoEstrada of mecanica.consumoEstrada"
-    >
-      {{ consumoEstrada }}
-    </div>
-  </div>
-  <div>
-    {{ mecanica.transmissao }}
-  </div>
-  <div>
-    {{ mecanica.tracao }}
-  </div>
-  <div>
-    {{ mecanica.direcao }}
-  </div>
-</div>
+      {{ nome }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas">
+      {{ mecanica.motorizacao | number: "1.1-1" }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas" style="padding: 0px">
+      <div
+        [ngClass]="{
+          simples: mecanica.combustivel.length == 1,
+          dupla: mecanica.combustivel.length == 2
+        }"
+        *ngFor="let combustivel of mecanica.combustivel"
+      >
+        {{ combustivel }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas; let i = index">
+      <div
+        [ngClass]="{
+          simples: mecanica.combustivel.length == 1,
+          dupla: mecanica.combustivel.length == 2
+        }"
+        *ngFor="let potencia of mecanica.potencia"
+      >
+        {{ potencia }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas">
+      <div
+        [ngClass]="{
+          simples: mecanica.combustivel.length == 1,
+          dupla: mecanica.combustivel.length == 2
+        }"
+        *ngFor="let torque of mecanica.torque"
+      >
+        {{ torque }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas">
+      <div
+        [ngClass]="{
+          simples: mecanica.combustivel.length == 1,
+          dupla: mecanica.combustivel.length == 2
+        }"
+        *ngFor="let velocidadeMax of mecanica.velocidadeMax"
+      >
+        {{ velocidadeMax }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas">
+      <div
+        [ngClass]="{
+          simples: mecanica.combustivel.length == 1,
+          dupla: mecanica.combustivel.length == 2
+        }"
+        *ngFor="let tempo0a100 of mecanica.tempo0a100"
+      >
+        {{ tempo0a100 }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas">
+      <div
+        [ngClass]="{
+          simples: mecanica.combustivel.length == 1,
+          dupla: mecanica.combustivel.length == 2
+        }"
+        *ngFor="let consumoCidade of mecanica.consumoCidade"
+      >
+        {{ consumoCidade }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas">
+      <div
+        [ngClass]="{
+          simples: mecanica.combustivel.length == 1,
+          dupla: mecanica.combustivel.length == 2
+        }"
+        *ngFor="let consumoEstrada of mecanica.consumoEstrada"
+      >
+        {{ consumoEstrada }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas">
+      {{ mecanica.transmissao }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas">
+      {{ mecanica.tracao }}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let mecanica of mecanicas">
+      {{ mecanica.direcao }}
+    </td>
+  </tr>
+</table>
