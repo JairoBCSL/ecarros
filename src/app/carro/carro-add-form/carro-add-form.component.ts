@@ -153,8 +153,6 @@ export class CarroAddFormComponent implements OnInit {
     });
     this.carroSevice.loadById(1).subscribe((dados) => {
       this.teste = dados;
-      console.log('Dados: ', dados);
-      console.log('Forma: ', this.form.value);
       this.form.patchValue(dados);
     });
   }

@@ -1,9 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 .cartao {
-  width: 1220px;
-  padding: 25px;
   margin-top: 25px;
   font-size: small;
   text-align: center;
@@ -11,7 +10,6 @@
 }
 
 .bloco {
-  width: 1120px;
   margin-top: 25px;
   box-shadow: 1px 0 0 0 #ccc, 0 1px 0 0 #ccc, 1px 1px 0 0 #ccc,
     1px 0 0 0 #ccc inset, 0 1px 0 0 #ccc inset;
@@ -23,7 +21,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 280px;
+  font-size: small;
 }
 
 .borda-legal {
@@ -31,4 +29,16 @@
     1px 0 0 0 #ccc inset, 0 1px 0 0 #ccc inset;
   border-radius: 10px;
   margin: 10px;
+}
+
+.verde {
+  color: green;
+}
+
+.largura {
+  width: 280px;
+}
+
+tr td:first-child {
+  text-align: start;
 }

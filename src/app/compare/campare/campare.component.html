@@ -8,15 +8,14 @@
     [dimensoes]="dimensoes"
     [nomes]="nomes"
   ></app-compare-dimensoes>
-  a<app-compare-conforto
+  <app-compare-conforto
     [confortos]="confortos"
     [nomes]="nomes"
   ></app-compare-conforto
-  >a b<app-compare-seguranca
+  ><app-compare-seguranca
     [segurancas]="segurancas"
     [nomes]="nomes"
-  ></app-compare-seguranca
-  >b
+  ></app-compare-seguranca>
 </div>
 <button class="btn btn-success" (click)="onList()">List</button>
 <input #inputRemove type="text" />

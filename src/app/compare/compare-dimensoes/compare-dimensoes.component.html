@@ -1,49 +1,61 @@
 <table class="bloco">
   <tr>
+    <td class="nao-quebra largura" style="background-color: #ddd">
+      <h3>Dimensões</h3>
+    </td>
     <td
       *ngFor="let nome of nomes"
       style="background-color: #ddd"
-      class="nao-quebra"
+      class="nao-quebra largura"
     >
       {{ nome }}
     </td>
   </tr>
+
   <tr>
+    <td>Altura (mm)</td>
     <td *ngFor="let dimensao of dimensoes">
       {{ dimensao.altura }}
     </td>
   </tr>
   <tr>
+    <td>Largura (mm)</td>
     <td *ngFor="let dimensao of dimensoes">
       {{ dimensao.largura }}
     </td>
   </tr>
   <tr>
+    <td>Comprimento (mm)</td>
     <td *ngFor="let dimensao of dimensoes">
       {{ dimensao.comprimento }}
     </td>
   </tr>
   <tr>
+    <td>Peso (Kg)</td>
     <td *ngFor="let dimensao of dimensoes">
       {{ dimensao.peso }}
     </td>
   </tr>
   <tr>
+    <td>Tanque (L)</td>
     <td *ngFor="let dimensao of dimensoes">
       {{ dimensao.tanque }}
     </td>
   </tr>
   <tr>
+    <td>Entre-eixos (mm)</td>
     <td *ngFor="let dimensao of dimensoes">
       {{ dimensao.entreeixos }}
     </td>
   </tr>
   <tr>
+    <td>Porta-Malas (L)</td>
     <td *ngFor="let dimensao of dimensoes">
       {{ dimensao.portamalas }}
     </td>
   </tr>
   <tr>
+    <td>Ocupantes)</td>
     <td *ngFor="let dimensao of dimensoes">
       {{ dimensao.ocupantes }}
     </td>

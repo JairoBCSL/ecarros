@@ -1,19 +1,24 @@
 <table class="bloco table-bordered">
   <tr>
+    <td class="nao-quebra largura" style="background-color: #ddd">
+      <h3>Mecânica</h3>
+    </td>
     <td
       *ngFor="let nome of nomes"
       style="background-color: #ddd"
-      class="nao-quebra"
+      class="nao-quebra largura"
     >
-      {{ nome }}
+      <div class="nao-quebra">{{ nome }}</div>
     </td>
   </tr>
   <tr>
+    <td>Motorização</td>
     <td *ngFor="let mecanica of mecanicas">
       {{ mecanica.motorizacao | number: "1.1-1" }}
     </td>
   </tr>
   <tr>
+    <td>Combustível</td>
     <td *ngFor="let mecanica of mecanicas" style="padding: 0px">
       <div
         [ngClass]="{
@@ -27,6 +32,7 @@
     </td>
   </tr>
   <tr>
+    <td>Potência (cv)</td>
     <td *ngFor="let mecanica of mecanicas; let i = index">
       <div
         [ngClass]="{
@@ -40,6 +46,7 @@
     </td>
   </tr>
   <tr>
+    <td>Torque (Kgf.m)</td>
     <td *ngFor="let mecanica of mecanicas">
       <div
         [ngClass]="{
@@ -53,6 +60,7 @@
     </td>
   </tr>
   <tr>
+    <td>Velocidade Máxima (Km/h)</td>
     <td *ngFor="let mecanica of mecanicas">
       <div
         [ngClass]="{
@@ -66,6 +74,7 @@
     </td>
   </tr>
   <tr>
+    <td>Tempo 0-100 (s)</td>
     <td *ngFor="let mecanica of mecanicas">
       <div
         [ngClass]="{
@@ -79,6 +88,7 @@
     </td>
   </tr>
   <tr>
+    <td>Consumo cidade (Km/L)</td>
     <td *ngFor="let mecanica of mecanicas">
       <div
         [ngClass]="{
@@ -92,6 +102,7 @@
     </td>
   </tr>
   <tr>
+    <td>Consumo estrada (Km/L)</td>
     <td *ngFor="let mecanica of mecanicas">
       <div
         [ngClass]="{
@@ -105,16 +116,19 @@
     </td>
   </tr>
   <tr>
+    <td>Transmissão</td>
     <td *ngFor="let mecanica of mecanicas">
       {{ mecanica.transmissao }}
     </td>
   </tr>
   <tr>
+    <td>Tração</td>
     <td *ngFor="let mecanica of mecanicas">
       {{ mecanica.tracao }}
     </td>
   </tr>
   <tr>
+    <td>Direção</td>
     <td *ngFor="let mecanica of mecanicas">
       {{ mecanica.direcao }}
     </td>

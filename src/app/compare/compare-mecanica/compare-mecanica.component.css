@@ -10,9 +10,6 @@
 
 td {
   border: 1px solid white;
-  border-collapse: collapse;
-  border-spacing: 0;
   box-shadow: 0 0 1px black;
-  padding: 0px;
   text-align: center;
 }

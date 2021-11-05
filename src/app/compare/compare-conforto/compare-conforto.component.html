@@ -1,101 +1,134 @@
-<table class="bloco">
+<table class="bloco table-bordered">
   <tr>
+    <td class="nao-quebra largura" style="background-color: #ddd">
+      <h3>Conforto</h3>
+    </td>
     <td
       *ngFor="let nome of nomes"
       style="background-color: #ddd"
-      class="nao-quebra"
+      class="nao-quebra largura"
     >
       {{ nome }}
     </td>
   </tr>
   <tr>
+    <td>Ar-Condicionado</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.arcondicionado }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.arcondicionado)"></i>
     </td>
   </tr>
   <tr>
+    <td>Travas Elétricas</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.travasEletricas }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.travasEletricas)"></i>
     </td>
   </tr>
   <tr>
+    <td>Ar Quente</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.arquente }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.arquente)"></i>
     </td>
   </tr>
   <tr>
+    <td>Piloto Automático</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.pilotoAutomatico }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.pilotoAutomatico)"></i>
     </td>
   </tr>
   <tr>
+    <td>Regulagem de Altura do Volante</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.regulagemAlturaVolante }}
+      <i
+        class="fas"
+        [ngClass]="aplicaClasses(conforto.regulagemAlturaVolante)"
+      ></i>
     </td>
   </tr>
   <tr>
+    <td>Trio Elétrico</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.trioEletrico }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.trioEletrico)"></i>
     </td>
   </tr>
   <tr>
+    <td>CD Player</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.cdplayer }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.cdplayer)"></i>
     </td>
   </tr>
   <tr>
+    <td>CD Player MP3</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.cdplayerMP3 }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.cdplayerMP3)"></i>
     </td>
   </tr>
   <tr>
+    <td>USB</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.usb }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.usb)"></i>
     </td>
   </tr>
   <tr>
+    <td>Rádio FM/AM</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.radioFmAm }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.radioFmAm)"></i>
     </td>
   </tr>
   <tr>
+    <td>Kit Multimídia</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.kitMultimidia }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.kitMultimidia)"></i>
     </td>
   </tr>
   <tr>
+    <td>Bancos de Couro</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.bancosDeCouro }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.bancosDeCouro)"></i>
     </td>
   </tr>
   <tr>
+    <td>Ajuste de Altura do Banco</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.ajusteAlturaBanco }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.ajusteAlturaBanco)"></i>
     </td>
   </tr>
   <tr>
+    <td>Ajuste Elétrico de Banco</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.ajusteEletricoBanco }}
+      <i
+        class="fas"
+        [ngClass]="aplicaClasses(conforto.ajusteEletricoBanco)"
+      ></i>
     </td>
   </tr>
   <tr>
+    <td>Vidros Elétricos Dianteiros</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.vidrosEletricosDianteiros }}
+      <i
+        class="fas"
+        [ngClass]="aplicaClasses(conforto.vidrosEletricosDianteiros)"
+      ></i>
     </td>
   </tr>
   <tr>
+    <td>Vidros Elétricos Traseiros</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.vidrosEletricosTraseiros }}
+      <i
+        class="fas"
+        [ngClass]="aplicaClasses(conforto.vidrosEletricosTraseiros)"
+      ></i>
     </td>
   </tr>
   <tr>
+    <td>Desembaçador Traseiro</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.desembTraseiro }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.desembTraseiro)"></i>
     </td>
   </tr>
   <tr>
+    <td>Teto Solar</td>
     <td *ngFor="let conforto of confortos">
-      {{ conforto.tetoSolar }}
+      <i class="fas" [ngClass]="aplicaClasses(conforto.tetoSolar)"></i>
     </td>
   </tr>
 </table>

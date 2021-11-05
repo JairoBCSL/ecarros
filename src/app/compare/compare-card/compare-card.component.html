@@ -1,6 +1,9 @@
-<table class="bloco p-3">
+<table class="bloco">
   <tr>
-    <td *ngFor="let card of cards">
+    <td rowspan="6" class="nao-quebra largura" style="background-color: #ddd">
+      <h3>Carros</h3>
+    </td>
+    <td *ngFor="let card of cards" class="nao-quebra largura">
       <div style="float: left">
         <h6 class="card-title">{{ card.marca }}</h6>
         <h5 class="card-title">{{ card.modelo }}</h5>

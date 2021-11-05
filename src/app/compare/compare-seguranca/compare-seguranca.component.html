@@ -1,61 +1,74 @@
-<table class="bloco">
+<table class="bloco table-bordered">
   <tr>
+    <td class="nao-quebra largura" style="background-color: #ddd">
+      <h3>Segurança</h3>
+    </td>
     <td
       *ngFor="let nome of nomes"
       style="background-color: #ddd"
-      class="nao-quebra"
+      class="nao-quebra largura"
     >
       {{ nome }}
     </td>
   </tr>
   <tr>
+    <td>ABS</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.abs }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.abs)"></i>
     </td>
   </tr>
   <tr>
+    <td>Airbag Motorista</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.airbagMotorista }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.airbagMotorista)"></i>
     </td>
   </tr>
   <tr>
+    <td>Airbag Passageiro</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.airbagPassageiro }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.airbagPassageiro)"></i>
     </td>
   </tr>
   <tr>
+    <td>Airbag Lateral</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.airbagLateral }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.airbagLateral)"></i>
     </td>
   </tr>
   <tr>
+    <td>Controle de Tração</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.controleDeTracao }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.controleDeTracao)"></i>
     </td>
   </tr>
   <tr>
+    <td>EBD</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.ebd }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.ebd)"></i>
     </td>
   </tr>
   <tr>
+    <td>Alarme</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.alarme }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.alarme)"></i>
     </td>
   </tr>
   <tr>
+    <td>Computador de Bordo</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.computadorDeBordo }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.computadorDeBordo)"></i>
     </td>
   </tr>
   <tr>
+    <td>Sensor de Farol</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.sensorDeFarol }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.sensorDeFarol)"></i>
     </td>
   </tr>
   <tr>
+    <td>Farol de Neblina</td>
     <td *ngFor="let seguranca of segurancas">
-      {{ seguranca.farolDeNeblina }}
+      <i class="fas" [ngClass]="aplicaClasses(seguranca.farolDeNeblina)"></i>
     </td>
   </tr>
 </table>

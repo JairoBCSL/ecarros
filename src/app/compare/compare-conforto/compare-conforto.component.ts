@@ -13,4 +13,11 @@ export class CompareConfortoComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  aplicaClasses(valor: boolean) {
+    return {
+      'fa-check-circle verde': valor,
+      'fa-times-circle': !valor,
+    };
+  }
 }
