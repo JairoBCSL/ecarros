@@ -11,43 +11,19 @@ import { FormGroup } from '@angular/forms';
   providedIn: 'root',
 })
 export class CarrosService extends CrudService<Carro> {
-  confortos = [
-    'arcondicionado',
-    'travasEletricas',
-    'arquente',
-    'pilotoAutomatico',
-    'regulagemAlturaVolante',
-    'trioEletrico',
-    'cdplayer',
-    'cdplayerMP3',
-    'usb',
-    'radioFmAm',
-    'kitMultimidia',
-    'bancosDeCouro',
-    'ajusteAlturaBanco',
-    'ajusteEletricoBanco',
-    'vidrosEletricosDianteiros',
-    'vidrosEletricosTraseiros',
-    'desembTraseiro',
-    'tetoSolar',
-  ];
-
-  seguranca = [
-    'abs',
-    'airbagMotorista',
-    'airbagPassageiro',
-    'airbagLateral',
-    'controleDeTracao',
-    'ebd',
-    'alarme',
-    'computadorDeBordo',
-    'sensorDeFarol',
-    'farolDeNeblina',
-  ];
-
   constructor(protected http: HttpClient) {
     super(http, `${environment.API}carros`);
   }
+
+  listMarcas() {
+    this.list().pipe(tap(console.log)).subscribe();
+  }
+
+  listModelos(id: number) {}
+
+  listVersoes(id: number) {}
+
+  listAnos(id: number) {}
 
   saveCarro(form: FormGroup) {
     console.log('Form ', form);

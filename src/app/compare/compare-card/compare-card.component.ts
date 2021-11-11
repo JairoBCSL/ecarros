@@ -1,4 +1,11 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  OnDestroy,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { CarroCard } from '../models/carro-card';
 
 @Component({
@@ -9,10 +16,16 @@ import { CarroCard } from '../models/carro-card';
 export class CompareCardComponent implements OnInit, OnDestroy {
   @Input() cards: CarroCard[];
   @Input() ids: number[];
+  @Output() remover = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
 
   ngOnDestroy(): void {}
+
+  fechar(id: number) {
+    console.log('Removendo: ', id);
+    this.remover.emit({ id: id });
+  }
 }

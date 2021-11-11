@@ -1,9 +1,16 @@
-<div style="background-color: #eee">
-  <app-compare-card [cards]="cards" [ids]="ids"></app-compare-card>
+<div style="background-color: #eee; display: inline-block">
+  <app-compare-card
+    [cards]="cards"
+    [ids]="ids"
+    (remover)="onRemover($event)"
+    style="display: inline-block"
+    class="align-baseline"
+  ></app-compare-card>
   <app-compare-mecanica
     [mecanicas]="mecanicas"
     [nomes]="nomes"
   ></app-compare-mecanica>
+
   <app-compare-dimensoes
     [dimensoes]="dimensoes"
     [nomes]="nomes"
@@ -17,6 +24,9 @@
     [nomes]="nomes"
   ></app-compare-seguranca>
 </div>
-<button class="btn btn-success" (click)="onList()">List</button>
-<input #inputRemove type="text" />
-<button class="btn btn-danger" (click)="onRemove(inputRemove)">Remove</button>
+<!--button class="btn btn-success" (click)="loadCar(carroId)">
+  Adicionar carro
+</button>
+<input [(ngModel)]="carroId" type="text" /-->
+<!--button class="btn btn-danger" (click)="onRemove(inputRemove)">Remove</button-->
+<app-add-compare (mudouValor)="onMudouValor($event)"></app-add-compare>

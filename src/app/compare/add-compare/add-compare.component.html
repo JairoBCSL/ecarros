@@ -1,0 +1,74 @@
+<div
+  class="largura bloco"
+  style="display: inline-block; vertical-align: top; box-shadow: none"
+>
+  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
+    <select
+      class="dropdown text-center btn btn-primary w-100"
+      [(ngModel)]="marca"
+      (ngModelChange)="onListModelos()"
+    >
+      <optgroup>
+        <option selected="selected" value="0">Marca</option>
+      </optgroup>
+      <optgroup>
+        <option *ngFor="let marca of marcas">
+          {{ marca }}
+        </option>
+      </optgroup>
+    </select>
+  </div>
+  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
+    <select
+      [disabled]="marca == '0'"
+      class="dropdown text-center btn btn-primary w-100"
+      [(ngModel)]="modelo"
+      (ngModelChange)="onListVersoes()"
+    >
+      <optgroup>
+        <option selected="selected" value="0">Modelo</option>
+      </optgroup>
+      <optgroup>
+        <option *ngFor="let modelo of modelos">
+          {{ modelo }}
+        </option>
+      </optgroup>
+    </select>
+  </div>
+
+  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
+    <select
+      [disabled]="modelo == '0'"
+      class="dropdown text-center btn btn-primary w-100"
+      [(ngModel)]="versao"
+      (ngModelChange)="onListAnos()"
+    >
+      <optgroup>
+        <option selected="selected" value="0">Versão</option>
+      </optgroup>
+      <optgroup>
+        <option *ngFor="let versao of versoes">
+          {{ versao }}
+        </option>
+      </optgroup>
+    </select>
+  </div>
+  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
+    <select
+      [disabled]="versao == '0'"
+      class="dropdown text-center btn btn-primary w-100"
+      [(ngModel)]="ano"
+      (ngModelChange)="onGetId()"
+    >
+      <optgroup>
+        <option selected="selected" value="0">Ano</option>
+      </optgroup>
+      <optgroup>
+        <option *ngFor="let ano of anos">
+          {{ ano }}
+        </option>
+      </optgroup>
+    </select>
+  </div>
+  <button class="btn btn-primary" (click)="addCar()">Comparar</button>
+</div>

@@ -27,20 +27,41 @@ export class CampareComponent implements OnInit {
   segurancas: CarroSeguranca[] = [];
   nomes: string[] = [];
   ids: number[] = [];
+
   constructor(private carroSevice: CarrosService) {}
 
+  onMudouValor(event: any) {
+    this.loadCar(event.id);
+  }
+
+  onRemover(event: any) {
+    let id = event.id;
+    this.carros.splice(id, 1);
+    this.cards.splice(id, 1);
+    this.mecanicas.splice(id, 1);
+    this.dimensoes.splice(id, 1);
+    this.confortos.splice(id, 1);
+    this.segurancas.splice(id, 1);
+    this.nomes.splice(id, 1);
+    this.ids.splice(id, 1);
+  }
+
   ngOnInit(): void {
-    this.carroSevice.list().subscribe((dados) => {
-      this.carros = dados;
-      this.carros.forEach((carro: Carro) => {
-        this.cards.push(carro.card);
-        this.mecanicas.push(carro.mecanica);
-        this.dimensoes.push(carro.dimensoes);
-        this.confortos.push(carro.conforto);
-        this.segurancas.push(carro.seguranca);
-        this.nomes.push(carro.nome);
-        this.ids.push(carro.id);
-      });
+    this.loadCar(1);
+    this.loadCar(2);
+    //this.loadCar(3);
+  }
+
+  loadCar(id: number) {
+    this.carroSevice.loadById(id).subscribe((dados) => {
+      this.carros.push(dados);
+      this.cards.push(dados.card);
+      this.mecanicas.push(dados.mecanica);
+      this.dimensoes.push(dados.dimensoes);
+      this.confortos.push(dados.conforto);
+      this.segurancas.push(dados.seguranca);
+      this.nomes.push(dados.nome);
+      this.ids.push(dados.id);
     });
   }
 

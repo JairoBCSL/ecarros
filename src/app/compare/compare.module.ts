@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CampareComponent } from './campare/campare.component';
 import { CompareRoutingModule } from './campare/compare-routing.module';
@@ -8,6 +9,7 @@ import { CompareMecanicaComponent } from './compare-mecanica/compare-mecanica.co
 import { CompareDimensoesComponent } from './compare-dimensoes/compare-dimensoes.component';
 import { CompareSegurancaComponent } from './compare-seguranca/compare-seguranca.component';
 import { CompareConfortoComponent } from './compare-conforto/compare-conforto.component';
+import { AddCompareComponent } from './add-compare/add-compare.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,13 @@ import { CompareConfortoComponent } from './compare-conforto/compare-conforto.co
     CompareDimensoesComponent,
     CompareSegurancaComponent,
     CompareConfortoComponent,
+    AddCompareComponent,
   ],
-  imports: [CommonModule, CompareRoutingModule],
+  imports: [
+    CommonModule,
+    CompareRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class CompareModule {}
