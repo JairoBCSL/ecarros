@@ -218,15 +218,15 @@
       },
       "mecanica": {
         "motorizacao": "2.0",
-        "combustivel": ["Gasolina"],
-        "potencia": [300],
+        "combustivel": "Gasolina",
+        "potencia": [340],
         "potenciaRpm": [5600],
-        "torque": [37.3],
+        "torque": [37.32],
         "torqueRpm": [4400],
         "velocidadeMax": [242],
         "tempo0a100": [6.3],
-        "consumoCidade": [4.7],
-        "consumoEstrada": [7.9],
+        "consumoCidade": [7.2],
+        "consumoEstrada": [11.8],
         "transmissao": "dupla embreagem man.sequ.com modo auto de 6 marchas",
         "tracao": "4x4",
         "direcao": "hidráulica"
@@ -275,75 +275,6 @@
       },
       "nome": "Mitsubishi Lancer Evolution X 2022",
       "id": 4
-    },
-    {
-      "id": 5,
-      "nome": "Toyota Corolla GLi CVT 2022",
-      "card": {
-        "marca": "Toyota",
-        "modelo": "Corolla",
-        "versao": "GLi CVT",
-        "ano": 2022,
-        "precoMin": 120000,
-        "precoMax": 160000
-      },
-      "mecanica": {
-        "motorizacao": "2.0",
-        "combustivel": ["Gasolina", "Etanol"],
-        "potencia": ["169", "177"],
-        "potenciaRpm": ["4400", "4400"],
-        "torque": ["21.4", "21.4"],
-        "torqueRpm": ["6600", "6600"],
-        "velocidadeMax": ["210", "210"],
-        "tempo0a100": ["8.5", "8.2"],
-        "consumoCidade": ["11.6", "8.0"],
-        "consumoEstrada": ["13.9", "9.7"],
-        "transmissao": "CVT - 10 Marchas",
-        "tracao": "Traseira",
-        "direcao": "Elétrica"
-      },
-      "dimensoes": {
-        "altura": 1455,
-        "largura": 1780,
-        "comprimento": 4630,
-        "peso": 1405,
-        "tanque": 50,
-        "entreeixos": 2700,
-        "portamalas": 470,
-        "ocupantes": 5
-      },
-      "conforto": {
-        "arcondicionado": true,
-        "travasEletricas": true,
-        "arquente": true,
-        "pilotoAutomatico": true,
-        "regulagemAlturaVolante": true,
-        "trioEletrico": false,
-        "cdplayer": false,
-        "cdplayerMP3": false,
-        "usb": true,
-        "radioFmAm": true,
-        "kitMultimidia": true,
-        "bancosDeCouro": true,
-        "ajusteAlturaBanco": true,
-        "ajusteEletricoBanco": true,
-        "vidrosEletricosDianteiros": true,
-        "vidrosEletricosTraseiros": true,
-        "desembTraseiro": true,
-        "tetoSolar": false
-      },
-      "seguranca": {
-        "abs": true,
-        "airbagMotorista": true,
-        "airbagPassageiro": true,
-        "airbagLateral": false,
-        "controleDeTracao": true,
-        "ebd": true,
-        "alarme": false,
-        "computadorDeBordo": true,
-        "sensorDeFarol": true,
-        "farolDeNeblina": true
-      }
     }
   ]
 }

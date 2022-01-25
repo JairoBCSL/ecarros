@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  FormArray,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -16,7 +17,7 @@ import { CarrosService } from 'src/app/shared/carros.service';
 })
 export class CarroAddFormComponent implements OnInit {
   form: FormGroup;
-
+  combustiveis: any;
   teste: Carro;
 
   constructor(
@@ -68,35 +69,35 @@ export class CarroAddFormComponent implements OnInit {
           '2.0',
           [Validators.required, Validators.pattern('[0-9]*.[0-9]')],
         ],
-        combustivel: [['Gasolina'], Validators.required],
-        potencia: [[300], [Validators.required, Validators.pattern('[0-9]*')]],
+        combustivel: ['Gasolina', [Validators.required]],
+        potencia: [
+          340,
+          [Validators.required, Validators.pattern('[0-9]*[.]?[0-9]*')],
+        ],
         potenciaRpm: [
-          [5600],
+          6500,
           [Validators.required, Validators.pattern('[0-9]*')],
         ],
         torque: [
-          [37.3],
-          [Validators.required, Validators.pattern('[0-9]*.[0-9]')],
+          37.32,
+          [Validators.required, Validators.pattern('[0-9]*[.]?[0-9]*')],
         ],
-        torqueRpm: [
-          [4400],
-          [Validators.required, Validators.pattern('[0-9]*')],
-        ],
+        torqueRpm: [4000, [Validators.required, Validators.pattern('[0-9]*')]],
         velocidadeMax: [
-          [242],
+          242,
           [Validators.required, Validators.pattern('[0-9]*')],
         ],
         tempo0a100: [
-          [6.3],
-          [Validators.required, Validators.pattern('[0-9]*.[0-9]')],
+          6.3,
+          [Validators.required, Validators.pattern('[0-9]*[.]?[0-9]*')],
         ],
         consumoCidade: [
-          [4.7],
-          [Validators.required, Validators.pattern('[0-9]*.[0-9]')],
+          7.2,
+          [Validators.required, Validators.pattern('[0-9]*[.]?[0-9]*')],
         ],
         consumoEstrada: [
-          [7.9],
-          [Validators.required, Validators.pattern('[0-9]*.[0-9]')],
+          11.8,
+          [Validators.required, Validators.pattern('[0-9]*[.]?[0-9]*')],
         ],
         transmissao: [
           'dupla embreagem man.sequ.com modo auto de 6 marchas',
@@ -151,10 +152,11 @@ export class CarroAddFormComponent implements OnInit {
         farolDeNeblina: false,
       }),
     });
-    this.carroSevice.loadById(1).subscribe((dados) => {
+    this.carroSevice.loadById(4).subscribe((dados) => {
       this.teste = dados;
-      this.form.patchValue(dados);
+      this.form.setValue(dados);
     });
+    console.log(this.form);
   }
 
   /*buildConfortos() {
@@ -194,6 +196,29 @@ export class CarroAddFormComponent implements OnInit {
 
   getControl(campo: string) {
     return this.form.get(campo) as FormControl;
+  }
+
+  getFormArray(campo: string) {
+    return this.form.get(campo) as FormArray;
+  }
+
+  createItem(): FormGroup {
+    return this.formBuilder.group({
+      tipo: '',
+      potencia: '',
+      potenciaRpm: '',
+      torque: '',
+      torqueRpm: '',
+      velocidadeMax: '',
+      tempo0a100: '',
+      consumoCidade: '',
+      consumoEstrada: '',
+    });
+  }
+
+  addItem(): void {
+    this.combustiveis = this.form.get('combustivel') as FormArray;
+    this.combustiveis.push(this.createItem());
   }
 
   trySubmit() {
