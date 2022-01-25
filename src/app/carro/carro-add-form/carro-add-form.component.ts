@@ -156,7 +156,7 @@ export class CarroAddFormComponent implements OnInit {
       this.teste = dados;
       this.form.setValue(dados);
     });
-    console.log(this.form);
+    //console.log(this.form);
   }
 
   /*buildConfortos() {

@@ -10,7 +10,6 @@
     [mecanicas]="mecanicas"
     [nomes]="nomes"
   ></app-compare-mecanica>
-
   <app-compare-dimensoes
     [dimensoes]="dimensoes"
     [nomes]="nomes"
@@ -29,4 +28,7 @@
 </button>
 <input [(ngModel)]="carroId" type="text" /-->
 <!--button class="btn btn-danger" (click)="onRemove(inputRemove)">Remove</button-->
-<app-add-compare (mudouValor)="onMudouValor($event)"></app-add-compare>
+<app-add-compare
+  *ngIf="carros.length < 3"
+  (mudouValor)="onMudouValor($event)"
+></app-add-compare>

@@ -32,6 +32,7 @@ export class CampareComponent implements OnInit {
 
   onMudouValor(event: any) {
     this.loadCar(event.id);
+    console.log(this.carros);
   }
 
   onRemover(event: any) {

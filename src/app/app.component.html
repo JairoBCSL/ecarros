@@ -1,1 +1,30 @@
-<router-outlet></router-outlet>
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand">E-Carros</a>
+    <ul class="navbar-nav">
+      <li class="navbar-item">
+        <a routerLinkActive="active" class="nav-link" routerLink="/comprar">
+          <strong> Comprar </strong>
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a routerLinkActive="active" class="nav-link" routerLink="/vender">
+          <strong> Vender </strong>
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a routerLinkActive="active" class="nav-link" routerLink="/compare">
+          <strong> Comparar </strong>
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a routerLinkActive="active" class="nav-link" routerLink="/addcarro">
+          <strong>Adicionar Carro</strong></a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
