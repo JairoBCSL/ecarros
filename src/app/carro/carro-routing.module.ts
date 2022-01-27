@@ -1,11 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarroAddFormComponent } from './carro-add-form/carro-add-form.component';
+import { CarroEditFormComponent } from './carro-edit-form/carro-edit-form.component';
+import { CarroEditComponent } from './carro-edit/carro-edit.component';
 
-const routes: Routes = [{ path: '', component: CarroAddFormComponent }];
+const carroRoutes: Routes = [
+  {
+    path: '',
+    children: [
+      { path: '', component: CarroEditComponent },
+      { path: ':id', component: CarroEditFormComponent },
+    ],
+  },
+];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(carroRoutes)],
   exports: [RouterModule],
 })
 export class CarroRoutingModule {}

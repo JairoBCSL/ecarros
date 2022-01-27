@@ -1,0 +1,343 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div [formGroup]="form" class="row">
+      <div formGroupName="card" class="row borda-legal">
+        <app-input-campo
+          class="col-2"
+          [label]="'Marca'"
+          [name]="'marca'"
+          [field]="getControl('card.marca')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-3"
+          [label]="'Modelo'"
+          [name]="'modelo'"
+          [field]="getControl('card.modelo')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Versão'"
+          [name]="'versao'"
+          [field]="getControl('card.versao')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Ano'"
+          [name]="'ano'"
+          [field]="getControl('card.ano')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Preço Mínimo'"
+          [name]="'precoMin'"
+          [field]="getControl('card.precoMin')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Preço Máximo'"
+          [name]="'precoMax'"
+          [field]="getControl('card.precoMax')"
+        ></app-input-campo>
+      </div>
+      <div formGroupName="mecanica" class="row borda-legal">
+        <app-input-campo
+          class="col-2"
+          [label]="'Motorização'"
+          [name]="'motorizacao'"
+          [field]="getControl('mecanica.motorizacao')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Combustivel'"
+          [name]="'combustivel'"
+          [field]="getControl('mecanica.combustivel')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Potência'"
+          [name]="'potencia'"
+          [field]="getControl('mecanica.potencia')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'RPM da potência'"
+          [name]="'potenciaRpm'"
+          [field]="getControl('mecanica.potenciaRpm')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Torque'"
+          [name]="'torque'"
+          [field]="getControl('mecanica.torque')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'RPM do torque'"
+          [name]="'torqueRpm'"
+          [field]="getControl('mecanica.torqueRpm')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Velocidade máxima'"
+          [name]="'velocidadeMax'"
+          [field]="getControl('mecanica.velocidadeMax')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Tempo 0-100'"
+          [name]="'tempo0a100'"
+          [field]="getControl('mecanica.tempo0a100')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Consumo na cidade'"
+          [name]="'consumoCidade'"
+          [field]="getControl('mecanica.consumoCidade')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Consumo na estrada'"
+          [name]="'consumoEstrada'"
+          [field]="getControl('mecanica.consumoEstrada')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Transmissão'"
+          [name]="'transmissao'"
+          [field]="getControl('mecanica.transmissao')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Tração'"
+          [name]="'tracao'"
+          [field]="getControl('mecanica.tracao')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Direção'"
+          [name]="'direcao'"
+          [field]="getControl('mecanica.direcao')"
+        ></app-input-campo>
+      </div>
+      <div formGroupName="dimensoes" class="row borda-legal">
+        <app-input-campo
+          class="col-2"
+          [label]="'Altura'"
+          [name]="'altura'"
+          [field]="getControl('dimensoes.altura')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Largura'"
+          [name]="'largura'"
+          [field]="getControl('dimensoes.largura')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Comprimento'"
+          [name]="'comprimento'"
+          [field]="getControl('dimensoes.comprimento')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Peso'"
+          [name]="'peso'"
+          [field]="getControl('dimensoes.peso')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Tanque'"
+          [name]="'tanque'"
+          [field]="getControl('dimensoes.tanque')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Entreeixos'"
+          [name]="'entreeixos'"
+          [field]="getControl('dimensoes.entreeixos')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Porta Malas'"
+          [name]="'portamalas'"
+          [field]="getControl('dimensoes.portamalas')"
+        ></app-input-campo>
+        <app-input-campo
+          class="col-2"
+          [label]="'Ocupantes'"
+          [name]="'ocupantes'"
+          [field]="getControl('dimensoes.ocupantes')"
+        ></app-input-campo>
+      </div>
+      <div formGroupName="conforto" class="row borda-legal">
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Ar-Condicionado'"
+          [name]="'arcondicionado'"
+          [field]="getControl('conforto.arcondicionado')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Travas Elétricas'"
+          [name]="'travasEletricas'"
+          [field]="getControl('conforto.travasEletricas')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Ar Quente'"
+          [name]="'arquente'"
+          [field]="getControl('conforto.arquente')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Piloto Automático'"
+          [name]="'pilotoAutomatico'"
+          [field]="getControl('conforto.pilotoAutomatico')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Regulagem de Altura do Volante'"
+          [name]="'regulagemAlturaVolante'"
+          [field]="getControl('conforto.regulagemAlturaVolante')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Trio Elétrico'"
+          [name]="'trioEletrico'"
+          [field]="getControl('conforto.trioEletrico')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'CD Player'"
+          [name]="'cdplayer'"
+          [field]="getControl('conforto.cdplayer')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'CD Player MP3'"
+          [name]="'cdplayerMP3'"
+          [field]="getControl('conforto.cdplayerMP3')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Entradas USB'"
+          [name]="'usb'"
+          [field]="getControl('conforto.usb')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Radio FM/AM'"
+          [name]="'radioFmAm'"
+          [field]="getControl('conforto.radioFmAm')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Kit Multimidia'"
+          [name]="'kitMultimidia'"
+          [field]="getControl('conforto.kitMultimidia')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Bancos de Couro'"
+          [name]="'bancosDeCouro'"
+          [field]="getControl('conforto.bancosDeCouro')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Ajuste de altura do banco'"
+          [name]="'ajusteDeAltura'"
+          [field]="getControl('conforto.ajusteAlturaBanco')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Ajuste elétrico do banco'"
+          [name]="'ajusteEletricoBanco'"
+          [field]="getControl('conforto.ajusteEletricoBanco')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Vidros elétricos Dianteiros'"
+          [name]="'vidrosEletricosDianteiros'"
+          [field]="getControl('conforto.vidrosEletricosDianteiros')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Vidros elétricos Traseiro'"
+          [name]="'vidrosEletricosTraseiros'"
+          [field]="getControl('conforto.vidrosEletricosTraseiros')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Desembaçador Traseiro'"
+          [name]="'desembTraseiro'"
+          [field]="getControl('conforto.desembTraseiro')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Teto Solar'"
+          [name]="'tetoSolar'"
+          [field]="getControl('conforto.tetoSolar')"
+        ></app-checkbox-campo>
+      </div>
+      <div formGroupName="seguranca" class="row borda-legal">
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'ABS'"
+          [name]="'abs'"
+          [field]="getControl('seguranca.abs')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Airbag do motorista'"
+          [name]="'airbagMotorista'"
+          [field]="getControl('seguranca.airbagMotorista')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Airbag do passageiro'"
+          [name]="'airbagPassageiro'"
+          [field]="getControl('seguranca.airbagPassageiro')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Airbag Lateral'"
+          [name]="'airbagLateral'"
+          [field]="getControl('seguranca.airbagLateral')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Controle de Tração'"
+          [name]="'controleDeTracao'"
+          [field]="getControl('seguranca.controleDeTracao')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Distribuição eletrônica de frenagem'"
+          [name]="'ebd'"
+          [field]="getControl('seguranca.ebd')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Computador de Bordo'"
+          [name]="'computadorDeBordo'"
+          [field]="getControl('seguranca.computadorDeBordo')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Sensor de Farol'"
+          [name]="'sensorDeFarol'"
+          [field]="getControl('seguranca.sensorDeFarol')"
+        ></app-checkbox-campo>
+        <app-checkbox-campo
+          class="col-3"
+          [label]="'Farol de Neblina'"
+          [name]="'farolDeNeblina'"
+          [field]="getControl('seguranca.farolDeNeblina')"
+        ></app-checkbox-campo>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="trySubmit()">
+      Adicionar Carro
+    </button>
+  </form>
+</div>

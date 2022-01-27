@@ -76,8 +76,8 @@
         "marca": "Honda",
         "modelo": "Civic",
         "versao": "1.5 Turbo Touring CVT",
-        "ano": 2022,
-        "precoMin": 116000,
+        "ano": "2022",
+        "precoMin": "116000",
         "precoMax": 156000
       },
       "mecanica": {
@@ -208,8 +208,10 @@
       }
     },
     {
+      "id": 4,
+      "nome": "Mitsubishi Lancer Evolution X MR 4WD 2022",
       "card": {
-        "marca": "Mitsubishi",
+        "marca": "Mitsubisho",
         "modelo": "Lancer Evolution",
         "versao": "X MR 4WD",
         "ano": "2022",
@@ -272,9 +274,7 @@
         "computadorDeBordo": true,
         "sensorDeFarol": true,
         "farolDeNeblina": true
-      },
-      "nome": "Mitsubishi Lancer Evolution X 2022",
-      "id": 4
+      }
     }
   ]
 }

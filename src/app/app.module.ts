@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { CarroEditComponent } from './carro/carro-edit/carro-edit.component';
 
 @NgModule({
-  declarations: [AppComponent, CarroEditComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [FormBuilder],
   bootstrap: [AppComponent],

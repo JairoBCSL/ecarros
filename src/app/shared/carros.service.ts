@@ -15,6 +15,14 @@ export class CarrosService extends CrudService<Carro> {
     super(http, `${environment.API}carros`);
   }
 
+  getCarroById(id: number) {
+    this.loadById(id).pipe(tap(console.log)).subscribe();
+  }
+
+  getCarroByNome(nome: string) {
+    //this.loadById(nome).pipe(tap(console.log)).subscribe();
+  }
+
   listMarcas() {
     this.list().pipe(tap(console.log)).subscribe();
   }
@@ -37,18 +45,7 @@ export class CarrosService extends CrudService<Carro> {
       form.get('card.versao')?.value +
       ' ' +
       form.get('card.ano')?.value;
-    // Adicionando intens de conforto
-    /*record = Object.assign(record, {
-      conforto: record.conforto
-        .map((v: string, i: number) => (v ? this.confortos[i] : null))
-        .filter((v: string) => v !== null),
-    });
-    // Adicionando itens de segurança
-    record = Object.assign(record, {
-      seguranca: record.seguranca
-        .map((v: string, i: number) => (v ? this.seguranca[i] : null))
-        .filter((v: string) => v !== null),
-    });*/
+
     console.log('Record ', record);
 
     if (record.id) {
