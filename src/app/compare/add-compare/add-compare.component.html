@@ -23,7 +23,7 @@
       [disabled]="marca == '0'"
       class="dropdown text-center btn btn-primary w-100"
       [(ngModel)]="modelo"
-      (ngModelChange)="onListVersoes()"
+      (ngModelChange)="onListAnos()"
     >
       <optgroup>
         <option selected="selected" value="0">Modelo</option>
@@ -40,25 +40,8 @@
     <select
       [disabled]="modelo == '0'"
       class="dropdown text-center btn btn-primary w-100"
-      [(ngModel)]="versao"
-      (ngModelChange)="onListAnos()"
-    >
-      <optgroup>
-        <option selected="selected" value="0">Versão</option>
-      </optgroup>
-      <optgroup>
-        <option *ngFor="let versao of versoes">
-          {{ versao }}
-        </option>
-      </optgroup>
-    </select>
-  </div>
-  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
-    <select
-      [disabled]="versao == '0'"
-      class="dropdown text-center btn btn-primary w-100"
       [(ngModel)]="ano"
-      (ngModelChange)="onGetId()"
+      (ngModelChange)="onListVersoes()"
     >
       <optgroup>
         <option selected="selected" value="0">Ano</option>
@@ -70,5 +53,24 @@
       </optgroup>
     </select>
   </div>
-  <button class="btn btn-primary" (click)="addCar()">Comparar</button>
+  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
+    <select
+      [disabled]="ano == 0"
+      class="dropdown text-center btn btn-primary w-100"
+      [(ngModel)]="versao"
+      (ngModelChange)="onGetId()"
+    >
+      <optgroup>
+        <option selected="selected" value="0">Versão</option>
+      </optgroup>
+      <optgroup>
+        <option *ngFor="let versao of versoes">
+          {{ versao }}
+        </option>
+      </optgroup>
+    </select>
+  </div>
+  <button [disabled]="versao == '0'" class="btn btn-primary" (click)="addCar()">
+    Comparar
+  </button>
 </div>

@@ -25,7 +25,7 @@ export class CompareCardComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {}
 
   fechar(id: number) {
-    console.log('Removendo: ', id);
+    //console.log('Removendo: ', id);
     this.remover.emit({ id: id });
   }
 }

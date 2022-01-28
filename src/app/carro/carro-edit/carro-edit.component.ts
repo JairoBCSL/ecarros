@@ -18,7 +18,7 @@ export class CarroEditComponent implements OnInit {
   versoes: string[] = [];
   versao: string = '0';
   anos: number[] = [];
-  ano: string = '0';
+  ano: number = 0;
   id: number;
   @Output() mudouValor = new EventEmitter();
 
@@ -41,7 +41,7 @@ export class CarroEditComponent implements OnInit {
         this.versoes = [];
         this.versao = '0';
         this.anos = [];
-        this.ano = '0';
+        this.ano = 0;
         dados.forEach((dado) => {
           if (this.marcas.indexOf(dado.card.marca) == -1)
             this.marcas.push(dado.card.marca);
@@ -59,13 +59,33 @@ export class CarroEditComponent implements OnInit {
         this.versoes = [];
         this.versao = '0';
         this.anos = [];
-        this.ano = '0';
+        this.ano = 0;
         dados.forEach((dado) => {
           if (
             dado.card.marca == this.marca &&
             this.modelos.indexOf(dado.card.modelo) == -1
           )
             this.modelos.push(dado.card.modelo);
+        });
+      });
+  }
+
+  onListAnos() {
+    this.carrosService
+      .list()
+      .pipe(delay(100))
+      .subscribe((dados: Carro[]) => {
+        this.anos = [];
+        this.ano = 0;
+        this.versoes = [];
+        this.versao = '0';
+        dados.forEach((dado) => {
+          if (
+            dado.card.marca == this.marca &&
+            dado.card.modelo == this.modelo &&
+            this.anos.indexOf(dado.card.ano) == -1
+          )
+            this.anos.push(dado.card.ano);
         });
       });
   }
@@ -77,34 +97,14 @@ export class CarroEditComponent implements OnInit {
       .subscribe((dados: Carro[]) => {
         this.versoes = [];
         this.versao = '0';
-        this.anos = [];
-        this.ano = '0';
         dados.forEach((dado) => {
           if (
             dado.card.marca == this.marca &&
             dado.card.modelo == this.modelo &&
-            this.versoes.indexOf(dado.card.versao) == -1
+            dado.card.ano == this.ano &&
+            this.versao.indexOf(dado.card.versao) == -1
           )
             this.versoes.push(dado.card.versao);
-        });
-      });
-  }
-
-  onListAnos() {
-    this.carrosService
-      .list()
-      .pipe(delay(100))
-      .subscribe((dados: Carro[]) => {
-        this.anos = [];
-        this.ano = '0';
-        dados.forEach((dado) => {
-          if (
-            dado.card.marca == this.marca &&
-            dado.card.modelo == this.modelo &&
-            dado.card.versao == this.versao &&
-            this.anos.indexOf(dado.card.ano) == -1
-          )
-            this.anos.push(dado.card.ano);
         });
       });
   }
@@ -119,7 +119,7 @@ export class CarroEditComponent implements OnInit {
             dado.card.marca == this.marca &&
             dado.card.modelo == this.modelo &&
             dado.card.versao == this.versao &&
-            dado.card.ano.toString() == this.ano
+            dado.card.ano == this.ano
           )
             this.id = dado.id;
         });

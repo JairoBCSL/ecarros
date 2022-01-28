@@ -1,3 +1,4 @@
+import { error } from '@angular/compiler/src/util';
 import { Component, createPlatform, OnInit } from '@angular/core';
 import {
   FormArray,
@@ -38,10 +39,15 @@ export class CarroEditFormComponent implements OnInit {
     });
 
     if (this.id > 0)
-      this.carroSevice.loadById(this.id).subscribe((dados) => {
-        this.teste = dados;
-        this.form.setValue(dados);
-      });
+      this.carroSevice.loadById(this.id).subscribe(
+        (dados) => {
+          this.teste = dados;
+          this.form.setValue(dados);
+        },
+        (error) => {
+          this.router.navigate(['carro/0']);
+        }
+      );
     //console.log(this.form);
   }
 
@@ -153,7 +159,7 @@ export class CarroEditFormComponent implements OnInit {
           '',
           [Validators.required, Validators.pattern('[0-9]*.[0-9]')],
         ],
-        combustivel: ['Gasolina', [Validators.required]],
+        combustivel: ['', [Validators.required]],
         potencia: [
           '',
           [Validators.required, Validators.pattern('[0-9]*[.]?[0-9]*')],

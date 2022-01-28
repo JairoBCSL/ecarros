@@ -13,15 +13,42 @@
       },
       "mecanica": {
         "motorizacao": "2.0",
-        "combustivel": ["Gasolina", "Etanol"],
-        "potencia": ["169", "177"],
-        "potenciaRpm": ["4400", "4400"],
-        "torque": ["21.4", "21.4"],
-        "torqueRpm": ["6600", "6600"],
-        "velocidadeMax": ["210", "210"],
-        "tempo0a100": ["8.5", "8.2"],
-        "consumoCidade": ["11.6", "8.0"],
-        "consumoEstrada": ["13.9", "9.7"],
+        "combustivel": [
+          "Gasolina",
+          "Etanol"
+        ],
+        "potencia": [
+          "169",
+          "177"
+        ],
+        "potenciaRpm": [
+          "4400",
+          "4400"
+        ],
+        "torque": [
+          "21.4",
+          "21.4"
+        ],
+        "torqueRpm": [
+          "6600",
+          "6600"
+        ],
+        "velocidadeMax": [
+          "210",
+          "210"
+        ],
+        "tempo0a100": [
+          "8.5",
+          "8.2"
+        ],
+        "consumoCidade": [
+          "11.6",
+          "8.0"
+        ],
+        "consumoEstrada": [
+          "13.9",
+          "9.7"
+        ],
         "transmissao": "CVT - 10 Marchas",
         "tracao": "Traseira",
         "direcao": "Elétrica"
@@ -82,15 +109,33 @@
       },
       "mecanica": {
         "motorizacao": 1.5,
-        "combustivel": ["Gasolina"],
-        "potencia": [173],
-        "potenciaRpm": [5500],
-        "torque": [22.3],
-        "torqueRpm": [5500],
-        "velocidadeMax": [220],
-        "tempo0a100": [7.5],
-        "consumoCidade": [11.8],
-        "consumoEstrada": [14.4],
+        "combustivel": [
+          "Gasolina"
+        ],
+        "potencia": [
+          173
+        ],
+        "potenciaRpm": [
+          5500
+        ],
+        "torque": [
+          22.3
+        ],
+        "torqueRpm": [
+          5500
+        ],
+        "velocidadeMax": [
+          220
+        ],
+        "tempo0a100": [
+          7.5
+        ],
+        "consumoCidade": [
+          11.8
+        ],
+        "consumoEstrada": [
+          14.4
+        ],
         "transmissao": "CVT - 7 Marchas",
         "tracao": "Traseira",
         "direcao": "Elétrica"
@@ -151,15 +196,42 @@
       },
       "mecanica": {
         "motorizacao": 1.4,
-        "combustivel": ["Gasolina", "Etanol"],
-        "potencia": [150, 153],
-        "potenciaRpm": [5600, 5200],
-        "torque": [24, 24.5],
-        "torqueRpm": [2100, 2000],
-        "velocidadeMax": [210, 210],
-        "tempo0a100": [9, 9],
-        "consumoCidade": [11.1, 7.6],
-        "consumoEstrada": [13.9, 9.4],
+        "combustivel": [
+          "Gasolina",
+          "Etanol"
+        ],
+        "potencia": [
+          150,
+          153
+        ],
+        "potenciaRpm": [
+          5600,
+          5200
+        ],
+        "torque": [
+          24,
+          24.5
+        ],
+        "torqueRpm": [
+          2100,
+          2000
+        ],
+        "velocidadeMax": [
+          210,
+          210
+        ],
+        "tempo0a100": [
+          9,
+          9
+        ],
+        "consumoCidade": [
+          11.1,
+          7.6
+        ],
+        "consumoEstrada": [
+          13.9,
+          9.4
+        ],
         "transmissao": "Automática com 6 marchas",
         "tracao": "Traseira",
         "direcao": "Elétrica"
@@ -211,7 +283,7 @@
       "id": 4,
       "nome": "Mitsubishi Lancer Evolution X MR 4WD 2022",
       "card": {
-        "marca": "Mitsubisho",
+        "marca": "Mitsubishi",
         "modelo": "Lancer Evolution",
         "versao": "X MR 4WD",
         "ano": "2022",
@@ -221,14 +293,30 @@
       "mecanica": {
         "motorizacao": "2.0",
         "combustivel": "Gasolina",
-        "potencia": [340],
-        "potenciaRpm": [5600],
-        "torque": [37.32],
-        "torqueRpm": [4400],
-        "velocidadeMax": [242],
-        "tempo0a100": [6.3],
-        "consumoCidade": [7.2],
-        "consumoEstrada": [11.8],
+        "potencia": [
+          340
+        ],
+        "potenciaRpm": [
+          5600
+        ],
+        "torque": [
+          37.32
+        ],
+        "torqueRpm": [
+          4400
+        ],
+        "velocidadeMax": [
+          242
+        ],
+        "tempo0a100": [
+          6.3
+        ],
+        "consumoCidade": [
+          7.2
+        ],
+        "consumoEstrada": [
+          11.8
+        ],
         "transmissao": "dupla embreagem man.sequ.com modo auto de 6 marchas",
         "tracao": "4x4",
         "direcao": "hidráulica"

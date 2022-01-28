@@ -27,5 +27,6 @@ import { AddCompareComponent } from './add-compare/add-compare.component';
     FormsModule,
     ReactiveFormsModule,
   ],
+  exports: [AddCompareComponent],
 })
 export class CompareModule {}
