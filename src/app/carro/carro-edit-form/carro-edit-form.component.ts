@@ -94,25 +94,6 @@ export class CarroEditFormComponent implements OnInit {
     return this.form.get(campo) as FormArray;
   }
 
-  createItem(): FormGroup {
-    return this.formBuilder.group({
-      tipo: '',
-      potencia: '',
-      potenciaRpm: '',
-      torque: '',
-      torqueRpm: '',
-      velocidadeMax: '',
-      tempo0a100: '',
-      consumoCidade: '',
-      consumoEstrada: '',
-    });
-  }
-
-  addItem(): void {
-    this.combustiveis = this.form.get('combustivel') as FormArray;
-    this.combustiveis.push(this.createItem());
-  }
-
   trySubmit() {
     if (this.form.valid) {
       this.onSubmit();
@@ -199,6 +180,78 @@ export class CarroEditFormComponent implements OnInit {
         entreeixos: ['', [Validators.required, Validators.pattern('[0-9]*')]],
         portamalas: ['', [Validators.required, Validators.pattern('[0-9]*')]],
         ocupantes: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+      }),
+      conforto: this.formBuilder.group({
+        arcondicionado: false,
+        travasEletricas: false,
+        arquente: false,
+        pilotoAutomatico: false,
+        regulagemAlturaVolante: false,
+        trioEletrico: false,
+        cdplayer: false,
+        cdplayerMP3: false,
+        usb: false,
+        radioFmAm: false,
+        kitMultimidia: false,
+        bancosDeCouro: false,
+        ajusteAlturaBanco: false,
+        ajusteEletricoBanco: false,
+        vidrosEletricosDianteiros: false,
+        vidrosEletricosTraseiros: false,
+        desembTraseiro: false,
+        tetoSolar: false,
+      }),
+      seguranca: this.formBuilder.group({
+        abs: false,
+        airbagMotorista: false,
+        airbagPassageiro: false,
+        airbagLateral: false,
+        controleDeTracao: false,
+        ebd: false,
+        alarme: false,
+        computadorDeBordo: false,
+        sensorDeFarol: false,
+        farolDeNeblina: false,
+      }),
+    });
+  }
+
+  editForm() {
+    return this.formBuilder.group({
+      id: [],
+      nome: [],
+      card: this.formBuilder.group({
+        marca: [''],
+        modelo: [''],
+        versao: [''],
+        ano: [''],
+        precoMin: [''],
+        precoMax: [''],
+      }),
+      mecanica: this.formBuilder.group({
+        motorizacao: [''],
+        combustivel: [''],
+        potencia: [''],
+        potenciaRpm: [''],
+        torque: [''],
+        torqueRpm: [''],
+        velocidadeMax: [''],
+        tempo0a100: [''],
+        consumoCidade: [''],
+        consumoEstrada: [''],
+        transmissao: [''],
+        tracao: [''],
+        direcao: ['', Validators.required],
+      }),
+      dimensoes: this.formBuilder.group({
+        altura: [''],
+        largura: [''],
+        comprimento: [''],
+        peso: [''],
+        tanque: [''],
+        entreeixos: [''],
+        portamalas: [''],
+        ocupantes: ['', [Validators.pattern('[0-9]*')]],
       }),
       conforto: this.formBuilder.group({
         arcondicionado: false,

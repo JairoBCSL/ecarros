@@ -1,13 +1,13 @@
-<div>
-  <label class="form-label" for="{{ name }}">
-    <input
-      #i
-      type="text"
-      [formControl]="field"
-      id="{{ name }}"
-      name="{{ name }}"
-      class="form-control"
-      [ngClass]="aplicaClasses()"
-    />{{ label }}
-  </label>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">{{ label }}</span>
+  </div>
+  <input
+    type="text"
+    [formControl]="field"
+    id="{{ name }}"
+    name="{{ name }}"
+    class="form-control"
+    [ngClass]="aplicaClasses()"
+  />
 </div>
