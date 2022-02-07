@@ -1,6 +1,6 @@
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">{{ label }}</span>
+    <span class="input-group-text" id="{{ name }}">{{ label }}</span>
   </div>
   <input
     type="text"
@@ -9,5 +9,6 @@
     name="{{ name }}"
     class="form-control"
     [ngClass]="aplicaClasses()"
+    list="list"
   />
 </div>

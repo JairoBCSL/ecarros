@@ -8,7 +8,8 @@ const carroRoutes: Routes = [
     path: '',
     children: [
       { path: '', component: CarroEditComponent },
-      { path: ':id', component: CarroEditFormComponent },
+      { path: ':idTo', component: CarroEditFormComponent },
+      { path: ':idTo/:idFrom', component: CarroEditFormComponent },
     ],
   },
 ];

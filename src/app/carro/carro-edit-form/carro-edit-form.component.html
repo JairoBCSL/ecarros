@@ -1,3 +1,4 @@
+<p *ngFor="let resultado of resultados$ | async">aaa: {{ resultado | json }}</p>
 <div class="container">
   <form (ngSubmit)="onSubmit()">
     <div [formGroup]="form" class="row">

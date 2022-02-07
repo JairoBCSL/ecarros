@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { CarrosService } from 'src/app/shared/carros.service';
 
 @Component({
   selector: 'app-input-campo',
@@ -10,6 +11,7 @@ export class InputCampoComponent implements OnInit {
   @Input() name: string = 'nome';
   @Input() label: string = 'Nome';
   @Input() field: FormControl;
+  lista: string[] = [];
 
   constructor() {}
 

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { error } from '@angular/compiler/src/util';
 import { Component, createPlatform, OnInit } from '@angular/core';
 import {
@@ -8,8 +9,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { Observable, Subscription } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 import { Carro } from 'src/app/compare/models/carro';
 import { CarrosService } from 'src/app/shared/carros.service';
 
@@ -23,26 +24,44 @@ export class CarroEditFormComponent implements OnInit {
   combustiveis: any;
   teste: Carro;
   inscricao: Subscription;
-  id: number;
+  idFrom: number;
+  idTo: number;
+  queryField = new FormControl();
+  SEARCH_URL = 'http://localhost:3000/carros';
+  resultados$: Observable<any>;
+  total: number;
 
   constructor(
     private formBuilder: FormBuilder,
     private carroSevice: CarrosService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) {}
+
+  onSearch() {
+    console.log(this.queryField.value);
+    this.resultados$ = this.http.get(this.SEARCH_URL).pipe(
+      tap((res: any) => (this.total = res.total)),
+      tap(console.log)
+    );
+  }
 
   ngOnInit(): void {
     this.inscricao = this.route.params.subscribe((params: any) => {
-      this.id = params['id'];
+      this.idFrom = params['idFrom'];
+      this.idTo = params['idTo'];
+      console.log('Id From: ' + this.idFrom);
+      console.log('Id To: ' + this.idTo);
       this.form = this.createForm();
     });
 
-    if (this.id > 0)
-      this.carroSevice.loadById(this.id).subscribe(
+    if (this.idFrom > 0)
+      this.carroSevice.loadById(this.idFrom).subscribe(
         (dados) => {
           this.teste = dados;
           this.form.setValue(dados);
+          console.log((this.form.value.id = this.idTo));
         },
         (error) => {
           this.router.navigate(['carro/0']);
@@ -62,6 +81,8 @@ export class CarroEditFormComponent implements OnInit {
   }*/
 
   onSubmit() {
+    if (this.idFrom != this.idTo) this.form.patchValue({ id: undefined });
+    console.log(this.form);
     this.carroSevice.saveCarro(this.form);
   }
 

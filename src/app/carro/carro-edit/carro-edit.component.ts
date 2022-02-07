@@ -127,10 +127,50 @@ export class CarroEditComponent implements OnInit {
   }
 
   editCar() {
-    this.router.navigate([`carro/${this.id}`]);
+    this.router.navigate([`carro/${this.id}/${this.id}`]);
   }
 
   addCar() {
     this.router.navigate([`carro/0`]);
+  }
+
+  addAno() {
+    // Fazer a consulta do primeiro resultado do modelo
+    let ano = 0;
+    this.carrosService
+      .list()
+      .pipe(delay(100))
+      .subscribe((dados: Carro[]) => {
+        dados.forEach((dado) => {
+          if (
+            dado.card.marca == this.marca &&
+            dado.card.modelo == this.modelo &&
+            dado.card.ano > ano
+          ) {
+            ano = dado.card.ano;
+            this.id = dado.id;
+            this.router.navigate([`carro/0/${this.id}`]);
+          }
+        });
+      });
+  }
+
+  addVersao() {
+    // Fazer a consulta do primeiro resultado do modelo
+    this.carrosService
+      .list()
+      .pipe(delay(100))
+      .subscribe((dados: Carro[]) => {
+        dados.forEach((dado) => {
+          if (
+            dado.card.marca == this.marca &&
+            dado.card.modelo == this.modelo &&
+            dado.card.ano == this.ano
+          ) {
+            this.id = dado.id;
+            this.router.navigate([`carro/0/${this.id}`]);
+          }
+        });
+      });
   }
 }

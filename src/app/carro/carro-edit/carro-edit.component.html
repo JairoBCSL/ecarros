@@ -1,82 +1,125 @@
 <div
-  class="largura bloco"
+  class="largura_add bloco"
   style="display: inline-block; vertical-align: top; box-shadow: none"
 >
-  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
-    <select
-      class="dropdown text-center btn btn-primary w-100"
-      [(ngModel)]="marca"
-      (ngModelChange)="onListModelos()"
-    >
-      <optgroup>
-        <option selected="selected" value="0">Marca</option>
-      </optgroup>
-      <optgroup>
-        <option *ngFor="let marca of marcas">
-          {{ marca }}
-        </option>
-      </optgroup>
-    </select>
-  </div>
-  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
-    <select
-      [disabled]="marca == '0'"
-      class="dropdown text-center btn btn-primary w-100"
-      [(ngModel)]="modelo"
-      (ngModelChange)="onListAnos()"
-    >
-      <optgroup>
-        <option selected="selected" value="0">Modelo</option>
-      </optgroup>
-      <optgroup>
-        <option *ngFor="let modelo of modelos">
-          {{ modelo }}
-        </option>
-      </optgroup>
-    </select>
+  <div class="row">
+    <div class="text-center mt-3 mb-3 col-8" style="margin: 0 auto">
+      <select
+        class="dropdown text-center btn btn-primary w-100"
+        [(ngModel)]="marca"
+        (ngModelChange)="onListModelos()"
+      >
+        <optgroup>
+          <option selected="selected" value="0">Marca</option>
+        </optgroup>
+        <optgroup>
+          <option *ngFor="let marca of marcas">
+            {{ marca }}
+          </option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="col-4"></div>
   </div>
 
-  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
-    <select
-      [disabled]="modelo == '0'"
-      class="dropdown text-center btn btn-primary w-100"
-      [(ngModel)]="ano"
-      (ngModelChange)="onListVersoes()"
-    >
-      <optgroup>
-        <option selected="selected" value="0">Ano</option>
-      </optgroup>
-      <optgroup>
-        <option *ngFor="let ano of anos">
-          {{ ano }}
-        </option>
-      </optgroup>
-    </select>
+  <div class="row">
+    <div class="text-center mt-3 mb-3 col-8" style="margin: 0 auto">
+      <select
+        [disabled]="marca == '0'"
+        class="dropdown text-center btn btn-primary w-100"
+        [(ngModel)]="modelo"
+        (ngModelChange)="onListAnos()"
+      >
+        <optgroup>
+          <option selected="selected" value="0">Modelo</option>
+        </optgroup>
+        <optgroup>
+          <option *ngFor="let modelo of modelos">
+            {{ modelo }}
+          </option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="col-4"></div>
   </div>
 
-  <div class="text-center w-75 mt-3 mb-3" style="margin: 0 auto">
-    <select
-      [disabled]="ano == 0"
-      class="dropdown text-center btn btn-primary w-100"
-      [(ngModel)]="versao"
-      (ngModelChange)="onGetId()"
-    >
-      <optgroup>
-        <option selected="selected" value="0">Versão</option>
-      </optgroup>
-      <optgroup>
-        <option *ngFor="let versao of versoes">
-          {{ versao }}
-        </option>
-      </optgroup>
-    </select>
+  <div class="row">
+    <div class="text-center mt-3 mb-3 col-8" style="margin: 0 auto">
+      <select
+        [disabled]="modelo == '0'"
+        class="dropdown text-center btn btn-primary w-100"
+        [(ngModel)]="ano"
+        (ngModelChange)="onListVersoes()"
+      >
+        <optgroup>
+          <option selected="selected" value="0">Ano</option>
+        </optgroup>
+        <optgroup>
+          <option *ngFor="let ano of anos">
+            {{ ano }}
+          </option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="col-4 my-3">
+      <button
+        (click)="addAno()"
+        [disabled]="modelo == '0'"
+        class="btn btn-primary w-100"
+      >
+        Novo ano
+      </button>
+    </div>
   </div>
-  <button
-    [disabled]="versao == '0'"
-    class="btn btn-primary"
-    (click)="editCar()"
-  >
-    Editar
-  </button>
-  <button class="btn btn-primary" (click)="addCar()">Adicionar</button>
+
+  <div class="row">
+    <div class="text-center mt-3 mb-3 col-8" style="margin: 0 auto">
+      <select
+        [disabled]="ano == 0"
+        class="dropdown text-center btn btn-primary w-100"
+        [(ngModel)]="versao"
+        (ngModelChange)="onGetId()"
+      >
+        <optgroup>
+          <option selected="selected" value="0">Versão</option>
+        </optgroup>
+        <optgroup>
+          <option *ngFor="let versao of versoes">
+            {{ versao }}
+          </option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="col-4 my-3">
+      <button
+        (click)="addVersao()"
+        class="btn btn-primary w-100"
+        [disabled]="ano == 0"
+      >
+        Nova versão
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <button
+        class="btn btn-primary col-8 m-auto my-3"
+        [disabled]="versao == '0'"
+        (click)="editCar()"
+      >
+        Editar
+      </button>
+    </div>
+    <div class="col-4"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <button class="btn btn-primary col-8 m-auto" (click)="addCar()">
+        Adicionar
+      </button>
+    </div>
+  </div>
+  <div class="col-4"></div>
 </div>
