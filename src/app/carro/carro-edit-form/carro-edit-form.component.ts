@@ -105,7 +105,7 @@ export class CarroEditFormComponent implements OnInit {
         { campo: 'portamalas', label: 'Porta Malas' },
         { campo: 'ocupantes', label: 'Ocupantes' },
       ],
-      confortos: [
+      conforto: [
         { campo: 'arcondicionado', label: 'Ar-Condicionado' },
         { campo: 'travasEletricas', label: 'Travas Elétricas' },
         { campo: 'arquente', label: 'Ar Quente' },
@@ -114,7 +114,7 @@ export class CarroEditFormComponent implements OnInit {
           campo: 'regulagemAlturaVolante',
           label: 'Regulagem de Altura do Volante',
         },
-        { campo: 'conforto.trioEletrico', label: 'Trio Elétrico' },
+        { campo: 'trioEletrico', label: 'Trio Elétrico' },
         { campo: 'cdplayer', label: 'CD Player' },
         { campo: 'cdplayerMP3', label: 'CD Player MP3' },
         { campo: 'usb', label: 'Entradas USB' },
@@ -134,7 +134,7 @@ export class CarroEditFormComponent implements OnInit {
         { campo: 'desembTraseiro', label: 'Desembaçador Traseiro' },
         { campo: 'tetoSolar', label: 'Teto Solar' },
       ],
-      segurancas: [
+      seguranca: [
         { campo: 'abs', label: 'ABS' },
         { campo: 'airbagMotorista', label: 'Airbag do motorista' },
         { campo: 'airbagPassageiro', label: 'Airbag do passageiro' },

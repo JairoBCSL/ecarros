@@ -22,20 +22,16 @@
         ></app-carro-edit-input>
       </div>
       <div formGroupName="conforto" class="row borda-legal">
-        <app-checkbox-campo
-          class="col-3"
-          [label]="'Ar-Condicionado'"
-          [name]="'arcondicionado'"
-          [field]="getControl('conforto.arcondicionado')"
-        ></app-checkbox-campo>
+        <app-carro-edit-check
+          [form]="getFormGroup('conforto')"
+          [campos]="campos.conforto"
+        ></app-carro-edit-check>
       </div>
       <div formGroupName="seguranca" class="row borda-legal">
-        <app-checkbox-campo
-          class="col-3"
-          [label]="'ABS'"
-          [name]="'abs'"
-          [field]="getControl('seguranca.abs')"
-        ></app-checkbox-campo>
+        <app-carro-edit-check
+          [form]="getFormGroup('seguranca')"
+          [campos]="campos.seguranca"
+        ></app-carro-edit-check>
       </div>
     </div>
     <button type="button" class="btn btn-primary" (click)="trySubmit()">

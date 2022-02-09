@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="row">
+    <app-checkbox-campo
+      *ngFor="let item of campos"
+      class="col-3"
+      [label]="item.label"
+      [name]="item.campo"
+      [field]="getControl(item.campo)"
+    ></app-checkbox-campo>
+  </div>
+</form>
