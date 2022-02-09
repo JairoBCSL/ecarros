@@ -6,6 +6,7 @@ import { InputCampoComponent } from './input-campo/input-campo.component';
 import { CheckboxCampoComponent } from './checkbox-campo/checkbox-campo.component';
 import { CarroEditFormComponent } from './carro-edit-form/carro-edit-form.component';
 import { CarroEditComponent } from './carro-edit/carro-edit.component';
+import { CarroEditInputComponent } from './carro-edit-input/carro-edit-input.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CarroEditComponent } from './carro-edit/carro-edit.component';
     CheckboxCampoComponent,
     CarroEditFormComponent,
     CarroEditComponent,
+    CarroEditInputComponent,
   ],
   imports: [CommonModule, CarroRoutingModule, FormsModule, ReactiveFormsModule],
 })

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { error } from '@angular/compiler/src/util';
-import { Component, createPlatform, OnInit } from '@angular/core';
+import { Component, createPlatform, OnInit, ViewChild } from '@angular/core';
 import {
   FormArray,
   FormBuilder,
@@ -30,6 +30,9 @@ export class CarroEditFormComponent implements OnInit {
   SEARCH_URL = 'http://localhost:3000/carros';
   resultados$: Observable<any>;
   total: number;
+  camposCard: any;
+  camposMecanica: any;
+  campos: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -51,34 +54,100 @@ export class CarroEditFormComponent implements OnInit {
     this.inscricao = this.route.params.subscribe((params: any) => {
       this.idFrom = params['idFrom'];
       this.idTo = params['idTo'];
-      console.log('Id From: ' + this.idFrom);
-      console.log('Id To: ' + this.idTo);
+      //console.log('Id From: ' + this.idFrom);
+      //console.log('Id To: ' + this.idTo);
       this.form = this.createForm();
     });
 
-    if (this.idFrom > 0)
+    if (this.idFrom > 0) {
       this.carroSevice.loadById(this.idFrom).subscribe(
         (dados) => {
           this.teste = dados;
           this.form.setValue(dados);
-          console.log((this.form.value.id = this.idTo));
+          this.form.value.id = this.idTo;
         },
         (error) => {
           this.router.navigate(['carro/0']);
         }
       );
-    //console.log(this.form);
+    }
+    this.campos = {
+      card: [
+        { campo: 'marca', label: 'Marca' },
+        { campo: 'modelo', label: 'Modelo' },
+        { campo: 'ano', label: 'Ano' },
+        { campo: 'versao', label: 'Versão' },
+        { campo: 'precoMin', label: 'Preço Mínimo' },
+        { campo: 'precoMax', label: 'Preço Máximo' },
+      ],
+      mecanica: [
+        { campo: 'motorizacao', label: 'Motorização' },
+        { campo: 'combustivel', label: 'Combustivel' },
+        { campo: 'potencia', label: 'Potência' },
+        { campo: 'potenciaRpm', label: 'RPM da potência' },
+        { campo: 'torque', label: 'Torque' },
+        { campo: 'torqueRpm', label: 'RPM do torque' },
+        { campo: 'velocidadeMax', label: 'Velocidade máxima' },
+        { campo: 'tempo0a100', label: 'Tempo 0-100' },
+        { campo: 'consumoCidade', label: 'Consumo na cidade' },
+        { campo: 'consumoEstrada', label: 'Consumo na estrada' },
+        { campo: 'transmissao', label: 'Transmissão' },
+        { campo: 'tracao', label: 'Tração' },
+        { campo: 'direcao', label: 'Direção' },
+      ],
+      dimensoes: [
+        { campo: 'altura', label: 'Altura' },
+        { campo: 'largura', label: 'Largura' },
+        { campo: 'comprimento', label: 'Comprimento' },
+        { campo: 'peso', label: 'Peso' },
+        { campo: 'tanque', label: 'Tanque' },
+        { campo: 'entreeixos', label: 'Entreeixos' },
+        { campo: 'portamalas', label: 'Porta Malas' },
+        { campo: 'ocupantes', label: 'Ocupantes' },
+      ],
+      confortos: [
+        { campo: 'arcondicionado', label: 'Ar-Condicionado' },
+        { campo: 'travasEletricas', label: 'Travas Elétricas' },
+        { campo: 'arquente', label: 'Ar Quente' },
+        { campo: 'pilotoAutomatico', label: 'Piloto Automático' },
+        {
+          campo: 'regulagemAlturaVolante',
+          label: 'Regulagem de Altura do Volante',
+        },
+        { campo: 'conforto.trioEletrico', label: 'Trio Elétrico' },
+        { campo: 'cdplayer', label: 'CD Player' },
+        { campo: 'cdplayerMP3', label: 'CD Player MP3' },
+        { campo: 'usb', label: 'Entradas USB' },
+        { campo: 'radioFmAm', label: 'Radio FM/AM' },
+        { campo: 'kitMultimidia', label: 'Kit Multimidia' },
+        { campo: 'bancosDeCouro', label: 'Bancos de Couro' },
+        { campo: 'ajusteAlturaBanco', label: 'Ajuste de altura do banco' },
+        { campo: 'ajusteEletricoBanco', label: 'Ajuste elétrico do banco' },
+        {
+          campo: 'vidrosEletricosDianteiros',
+          label: 'Vidros elétricos Dianteiros',
+        },
+        {
+          campo: 'vidrosEletricosTraseiros',
+          label: 'Vidros elétricos Traseiro',
+        },
+        { campo: 'desembTraseiro', label: 'Desembaçador Traseiro' },
+        { campo: 'tetoSolar', label: 'Teto Solar' },
+      ],
+      segurancas: [
+        { campo: 'abs', label: 'ABS' },
+        { campo: 'airbagMotorista', label: 'Airbag do motorista' },
+        { campo: 'airbagPassageiro', label: 'Airbag do passageiro' },
+        { campo: 'airbagLateral', label: 'Airbag Lateral' },
+        { campo: 'controleDeTracao', label: 'Controle de Tração' },
+        { campo: 'ebd', label: 'Distribuição eletrônica de frenagem' },
+        { campo: 'computadorDeBordo', label: 'Computador de Bordo' },
+        { campo: 'sensorDeFarol', label: 'Sensor de Farol' },
+        { campo: 'farolDeNeblina', label: 'Farol de Neblina' },
+      ],
+    };
+    console.log(this.form);
   }
-
-  /*buildConfortos() {
-    const values = this.confortos.map((v) => new FormControl(v));
-    return this.formBuilder.array(values);
-  }
-
-  buildSeguranca() {
-    const values = this.segurancas.map((v) => new FormControl(v));
-    return this.formBuilder.array(values);
-  }*/
 
   onSubmit() {
     if (this.idFrom != this.idTo) this.form.patchValue({ id: undefined });
@@ -115,7 +184,12 @@ export class CarroEditFormComponent implements OnInit {
     return this.form.get(campo) as FormArray;
   }
 
+  getFormGroup(campo: string) {
+    return this.form.get(campo) as FormGroup;
+  }
+
   trySubmit() {
+    console.log(this.form);
     if (this.form.valid) {
       this.onSubmit();
     } else {
